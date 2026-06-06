@@ -1,0 +1,284 @@
+The first rank where divisibility stops characterizing the
+series-parallel types is $n=5$.  We treat $S_5$ as the first nontrivial
+test of the extension-tiler converse.
+
+We first isolate the finite classification input.  Let $N$ be the
+four-element poset on $\{a,b,c,d\}$ with relations
+\[
+        a<b,\qquad c<b,\qquad c<d.
+\]
+This is the forbidden induced poset in the Valdes--Tarjan--Lawler
+characterization of finite series-parallel posets, viewing a poset through
+its transitive directed comparability graph.
+
+\begin{lemma}[One-point $N$-extensions]
+\label{lem:one-point-n-extensions}
+Every non-series-parallel poset on five elements is isomorphic to a
+one-point extension of $N$.
+
+More explicitly, let $x$ be the added point and put
+\[
+        D=\{y\in N:y<x\},\qquad U=\{y\in N:x<y\}.
+\]
+Then $D$ is an order ideal of $N$, $U$ is an order filter of $N$, and
+\[
+        d<_N u\quad\text{for every }d\in D,\ u\in U.
+\]
+Conversely, any pair $(D,U)$ satisfying these three conditions defines a
+five-element poset containing $N$ as an induced subposet.
+\end{lemma}
+
+\begin{proof}
+By the Valdes--Tarjan--Lawler characterization, a finite poset is
+non-series-parallel exactly when it contains an induced $N$-poset.  Thus a
+non-series-parallel poset on five elements is obtained from an induced
+copy of $N$ by adding one further point $x$.
+
+If $y<x$ and $z<y$ in $N$, then $z<x$, so $D$ is an ideal.  Dually, if
+$x<y$ and $y<z$ in $N$, then $x<z$, so $U$ is a filter.  Finally, if
+$d\in D$ and $u\in U$, then $d<x<u$, hence $d<u$ by transitivity.  Since
+the chosen four-point subposet is induced, this comparability must already
+belong to $N$.
+
+Conversely, if $D$ is an ideal, $U$ is a filter, and every $d\in D$ is below
+every $u\in U$ in $N$, then adjoining relations $d<x$ for $d\in D$ and
+$x<u$ for $u\in U$ creates no new comparability among the four old
+elements beyond those already in $N$.  Hence $N$ remains an induced
+subposet.
+\end{proof}
+
+\begin{lemma}[Profile table]
+\label{lem:s5-profile-table}
+Up to isomorphism, there are exactly $15$ non-series-parallel posets on
+five elements.  Their numbers of linear extensions are
+\[
+5,5,7,7,8,9,9,11,14,14,16,16,18,18,25.
+\]
+\end{lemma}
+
+\begin{proof}
+The ideals of $N$ are
+\[
+\emptyset,\ a,\ c,\ ac,\ cd,\ abc,\ acd,\ abcd,
+\]
+and the filters of $N$ are
+\[
+\emptyset,\ b,\ d,\ ab,\ bd,\ abd,\ bcd,\ abcd.
+\]
+Here, for instance, $ac$ denotes the set $\{a,c\}$.
+
+The valid profiles $(D,U)$ from Lemma~\ref{lem:one-point-n-extensions}
+are exactly the nonempty entries of the following matrix.  Each entry is
+the value of $|L(P_{D,U})|$ for the corresponding one-point extension:
+\[
+\begin{array}{c|cccccccc}
+D\backslash U
+&\emptyset& b& d& ab& bd& abd& bcd& abcd\\
+\hline
+\emptyset &25&18&16&9&14&8&7&5\\
+a         &16&9&&&&&&\\
+c         &18&11&9&&7&&&\\
+ac        &14&7&&&&&&\\
+cd        &9&&&&&&&\\
+abc       &7&&&&&&&\\
+acd       &8&&&&&&&\\
+abcd      &5&&&&&&&
+\end{array}
+\]
+
+The entries are computed by insertion into the five linear extensions of
+$N$:
+\[
+        acbd,\quad acdb,\quad cabd,\quad cadb,\quad cdab.
+\]
+For a profile $(D,U)$, the number $|L(P_{D,U})|$ is the sum, over these
+five words, of the number of slots in which $x$ may be inserted after all
+elements of $D$ and before all elements of $U$.
+
+There are $20$ valid profiles before quotienting by isomorphism.  The only
+identifications among them are
+\[
+\begin{gathered}
+(ac,b)\cong(abc,\emptyset),\qquad
+(\emptyset,bcd)\cong(c,bd),\\
+(\emptyset,abd)\cong(acd,\emptyset),\qquad
+(c,d)\cong(cd,\emptyset),\\
+(\emptyset,ab)\cong(a,b).
+\end{gathered}
+\]
+One may check these five equivalences by the following explicit relabelings
+of $\{a,b,c,d,x\}$, written in cycle notation:
+\[
+\begin{array}{c|c}
+\text{profiles} & \text{relabeling}\\
+\hline
+(ac,b)\cong(abc,\emptyset) & (b\,x)\\
+(\emptyset,bcd)\cong(c,bd) & (c\,x)\\
+(\emptyset,abd)\cong(acd,\emptyset) & (a\,d\,b\,x\,c)\\
+(c,d)\cong(cd,\emptyset) & (d\,x)\\
+(\emptyset,ab)\cong(a,b) & (a\,x).
+\end{array}
+\]
+
+Appendix~\ref{app:profile-quotient} records a short invariant check that
+there are no further identifications: for each of the $15$ quotient
+classes, the pair consisting of $|L|$ and the multiset of lower/upper
+comparability counts of its elements is distinct.
+
+Thus the $20$ profiles give exactly $15$ isomorphism classes.  Reading one
+representative from each class gives the displayed multiset of extension
+numbers.
+\end{proof}
+
+\begin{corollary}[Divisibility reduction]
+\label{cor:s5-divisibility-reduction}
+Among non-series-parallel posets on five elements, only three isomorphism
+classes satisfy $|L(P)|\mid 120$: the two classes with $|L(P)|=5$ and the
+single class with $|L(P)|=8$.
+\end{corollary}
+
+\begin{lemma}[Fixed end-position obstruction]
+\label{lem:fixed-position-obstruction}
+Let $P$ be a poset on five elements with $|L(P)|=5$.  If all linear
+extensions of $P$ have the same first letter, or all have the same last
+letter, then $P$ is not an extension tiler.
+\end{lemma}
+
+\begin{proof}
+Suppose first that every word in $L(P)$ begins with $p$.  For any
+$a\in S_5$, every word in $aL(P)$ begins with $a(p)$, so the translate is
+contained in one first-letter fiber
+\[
+        F_x^{\mathrm{first}}=\{\sigma\in S_5:\sigma_1=x\}.
+\]
+Each such fiber has size $4!=24$.  A tiling by translates of $L(P)$ would
+partition every first-letter fiber into blocks of size $5$, impossible
+because $5\nmid 24$.
+
+The last-letter case is identical, using the fibers
+$F_x^{\mathrm{last}}=\{\sigma\in S_5:\sigma_5=x\}$.
+\end{proof}
+
+\begin{lemma}[Two-letter obstruction]
+\label{lem:two-letter-obstruction}
+Let $P=P_{\emptyset,abd}$ be the one-point extension with relations
+\[
+        a<b,\qquad c<b,\qquad c<d,\qquad x<a,\qquad x<b,\qquad x<d.
+\]
+Then $P$ is not an extension tiler.
+\end{lemma}
+
+\begin{proof}
+The linear extensions of $P$ are
+\[
+\begin{gathered}
+cxabd,\quad cxadb,\quad cxdab,\quad xacbd,\quad xacdb,\\
+xcabd,\quad xcadb,\quad xcdab.
+\end{gathered}
+\]
+Thus their first-letter and first-two-letter distributions are
+\[
+\#\{\sigma\in L(P):\sigma_1=x\}=5,\qquad
+\#\{\sigma\in L(P):\sigma_1=c\}=3,
+\]
+and
+\[
+\#(xc)=3,\qquad \#(cx)=3,\qquad \#(xa)=2,
+\]
+where $\#(uv)$ denotes the number of extensions beginning with the ordered
+pair $(u,v)$.
+
+Assume for contradiction that $S_5$ is partitioned by $15$ left
+translates of $L(P)$.  For each translate $gL(P)$ write
+\[
+        g(x)=u,\qquad g(c)=v,\qquad g(a)=w.
+\]
+Then this translate contributes $3$ elements to the ordered-pair fiber
+$(u,v)$, $3$ elements to the fiber $(v,u)$, and $2$ elements to the fiber
+$(u,w)$.
+
+First count only first letters.  Let
+\[
+\alpha_y=\#\{g:g(x)=y\},\qquad
+\beta_y=\#\{g:g(c)=y\}.
+\]
+The first-letter fiber over $y$ has size $24$, so
+\[
+        5\alpha_y+3\beta_y=24.
+\]
+The nonnegative integer solutions are $(\alpha_y,\beta_y)=(3,3)$ and
+$(0,8)$.  Since $\sum_y\alpha_y=15$, the second possibility cannot occur.
+Thus
+\[
+        \alpha_y=\beta_y=3
+\]
+for every label $y$.
+
+Now fix distinct labels $u,v$, and define
+\[
+N_{uv}=\#\{g:g(x)=u,\ g(c)=v\},\qquad
+C_{uv}=\#\{g:g(x)=u,\ g(a)=v\}.
+\]
+The ordered-pair fiber $(u,v)$ has size $3!=6$, hence
+\[
+        3N_{uv}+3N_{vu}+2C_{uv}=6.
+\]
+Modulo $3$, this gives $C_{uv}\equiv 0\pmod 3$.  For fixed $u$,
+\[
+        \sum_{v\ne u} C_{uv}=\alpha_u=3,
+\]
+so there is a unique value $f(u)\ne u$ with $C_{u,f(u)}=3$, and all other
+$C_{uv}$ are zero.
+
+The fiber equation now says that if $f(u)=v$, then
+$N_{uv}+N_{vu}=0$, while if $f(u)\ne v$, then $N_{uv}+N_{vu}=2$.  Applying
+the same statement to the opposite ordered pair $(v,u)$ gives
+\[
+        f(u)=v \quad\Longleftrightarrow\quad f(v)=u.
+\]
+Thus $f$ would be a fixed-point-free involution on a set of five
+elements.  No such involution exists.  This contradiction excludes the
+tiling.
+\end{proof}
+
+\begin{theorem}[$S_5$ classification]
+\label{thm:s5-classification}
+For posets $P$ on five elements, $L(P)$ tiles $S_5$ by left translates if
+and only if $P$ is series-parallel.
+\end{theorem}
+
+\begin{proof}
+The positive direction follows from Theorem~\ref{thm:sp-extension-tiler}.
+Conversely, suppose that $P$ is an extension tiler on five elements.  Then
+$|L(P)|$ must divide $|S_5|=120$.
+
+If $P$ is not series-parallel, Corollary~\ref{cor:s5-divisibility-reduction}
+shows that only three non-series-parallel types pass this divisibility
+test: the two types with $|L(P)|=5$ and the type with $|L(P)|=8$.
+
+The two $|L(P)|=5$ profiles are $(abcd,\emptyset)$ and
+$(\emptyset,abcd)$.  In the first, all linear extensions end with $x$; in
+the second, all linear extensions begin with $x$.  Lemma~\ref{lem:fixed-position-obstruction}
+excludes both types.
+
+The remaining divisible non-series-parallel type is represented by
+$P_{\emptyset,abd}$ and is excluded by
+Lemma~\ref{lem:two-letter-obstruction}.  Therefore no non-series-parallel
+poset on five elements is an extension tiler.
+\end{proof}
+
+For auditability, the finite table above and the former rank and packing
+certificates are mirrored in the static audit file
+\[
+\texttt{03-certificates/s5\_expected\_output.txt}.
+\]
+The theorem itself uses only the finite table and the elementary
+obstructions proved above.  The supplementary replay script is included
+for auditability and reproduces the aggregate table together with the
+former rank and packing certificates; it is not a dependency of the proof.
+
+\begin{remark}
+This $n=5$ means Coxeter type $A_4$ and the group $S_5$.  It is not the
+separate geometric question of dissecting a tetrahedron into five
+congruent pieces.
+\end{remark}

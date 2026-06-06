@@ -1,0 +1,58 @@
+red_team_pass:
+  id: s6_paper_red_team_readthrough_2026_06_06
+  date: "2026-06-06"
+  scope:
+    - paper/main.tex
+    - paper/sections/*.tex
+    - scripts/verify_s6_p038_biset_counterexample.py
+    - certificates/s6_classification_status.md
+    - certificates/s6_classification_status.json
+    - certificates/legacy_colab_artifacts.md
+  papp_standard_source: local PAPP red-team rules used during preparation
+  decision: no_paper_blocking_issue_inside_current_claim_boundary
+  safe_claims:
+    - "S5 extension tilers are exactly series-parallel posets."
+    - "The series-parallel converse is false in S6."
+    - "P038 is a verified non-series-parallel extension tiler in S6."
+    - "The broader S6 19/38 finite audit is laboratory status."
+  not_promoted:
+    - "Full S6 19/38 classification as a theorem."
+    - "Five hard obstruction cases as compact mathematical lemmas."
+    - "Colab/RoundingSat timeout logs as proof certificates."
+  hard_cases:
+    - "001"
+    - "013"
+    - "017"
+    - "019"
+    - "020"
+  checks:
+    RT-1_source_mismatch: no_blocker_found
+    RT-2_notation_drift: no_blocker_found
+    RT-3_normalization_error: no_blocker_found
+    RT-4_theorem_import_abuse: no_new_theorem_import
+    RT-5_finite_replay_overclaim: mitigated_by_laboratory_status_language
+    RT-6_numeric_precision_overclaim: not_applicable_finite_exact
+    RT-7_missing_exception: mitigated_by_explicit_five_hard_cases
+    RT-8_artifact_not_reproducible: p038_reproducible_hard_cases_not_certified
+    RT-9_code_paper_mismatch: p038_verifier_matches_theorem
+    RT-10_public_claim_mismatch: mitigated_by_abstract_and_section_language
+    RT-11_agent_excessive_agency: mitigated_by_not_promoting_agent_outputs
+    RT-12_prompt_source_injection: not_applicable
+    RT-13_copyright_license_breach: no_blocker_found
+    RT-14_false_cross_field_bridge: no_bridge_claim
+    RT-15_stale_external_data_or_citation_drift: no_new_external_data
+  verification:
+    p038_verifier: PASS
+    latex_build: PASS
+    main_pdf_pages: 14
+    main_pdf_bytes: 398078
+    main_pdf_sha256: 226BDCB3BD680D04DFEAB6DC0B7EAC8A630F7656C1B9959E1153389F072A2752
+    s5_replay: PASS
+    undefined_reference_count: 0
+    citation_warning_count: 0
+    meaningful_latex_warning_count: 0
+    overfull_underfull_count: 0
+    trigger_phrase_hits: 0
+  recommended_next_action:
+    - "Polish the conservative S6 laboratory section."
+    - "If continuing S6 closure, attack 001/013/017/019/020 through residual packing compression, not raw Colab OPB."

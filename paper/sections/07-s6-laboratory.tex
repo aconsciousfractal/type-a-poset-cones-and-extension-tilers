@@ -1,0 +1,124 @@
+The counterexample in Theorem~\ref{thm:s6-counterexample} changes the
+six-element problem from a converse problem into a classification problem.
+The accompanying laboratory therefore separates three levels:
+
+\begin{enumerate}
+\item paper-grade positive examples, such as the double-coset construction
+      above;
+\item paper-grade or nearly paper-grade obstruction families;
+\item finite audit data whose current certificates are still too bulky for
+      the main text.
+\end{enumerate}
+
+The current audit of the non-series-parallel six-element types satisfying
+the necessary divisibility condition gives the following status.  Here
+``unresolved'' means unresolved inside the current finite laboratory
+pipeline; it does not mean that every negative row has a short
+independently checkable paper certificate.
+\[
+\begin{array}{lr}
+\text{non-series-parallel divisible candidates} & 57,\\
+\text{non-series-parallel tilers} & 19,\\
+\text{obstruction-side candidates classified negative by the audit} & 38,\\
+\text{unresolved survivors in the audit} & 0.
+\end{array}
+\]
+This table is included as audit-level laboratory status data, not as a
+theorem of this paper.  We do not promote the $19/38$ split to a theorem
+because five obstruction-side rows do not yet have short independently
+checkable certificates in the text or supplement.
+
+\subsection*{Positive structure}
+
+The known non-series-parallel tilers in $S_6$ include multiplier sets with
+subgroup, coset, and double-coset structure.
+Theorem~\ref{thm:s6-counterexample} is the cleanest instance:
+the multiplier set is
+\[
+        A=HK\sqcup H\tau K,
+\]
+with $H\cong D_4$ and $K\cong S_3$.  In the verified witness, the
+right-hand symmetry permutes a natural perfect matching in the cover graph
+of the poset, while the left-hand symmetry organizes the target labels.
+This suggests, but does not prove, that the positive side has a
+group-theoretic organization beyond raw exact-cover search.
+
+\subsection*{Obstruction grammar}
+
+On the negative side, most obstruction-side candidates fall into reusable
+families.  The current grammar includes:
+\[
+\begin{gathered}
+\text{terminal-block divisibility},\qquad
+\text{endpoint-pair obstructions},\\
+\text{localized }(3,3,2)\text{ endpoint obstructions},\qquad
+\text{positional gcd obstructions},\\
+\text{single-position balance},\qquad
+\text{ordered-pair balance},\\
+\text{mod-}3\text{ peak/threshold obstructions in low partition modules}.
+\end{gathered}
+\]
+These families are valuable because they explain failures by small
+statistics of words, terminal blocks, or low-dimensional permutation
+modules, rather than by a raw exact-cover search.
+
+\subsection*{The five hard obstruction cases}
+
+Five obstruction-side candidates remain the main compression problem:
+\[
+        001,\qquad 013,\qquad 017,\qquad 019,\qquad 020.
+\]
+These are the canonical IDs used in
+\texttt{03-certificates/s6\_classification\_status.json}.  The canonical
+ordering rule is part of the laboratory enumeration data rather than the
+present paper text, so the IDs should be read as stable project-local
+handles.
+
+The current status table records them as defect-one residual packing
+obstructions.  The numerical rows below are taken from
+\texttt{s6\_classification\_status.json}; they are not derived from the
+legacy Colab/RoundingSat timeout logs mentioned in the computational
+appendix.  After forcing the identity translate, the residual packing graph
+has maximum clique one below the size required for a tiling.  In the table
+below, ``req.'' is the number of tiles required for a full tiling,
+``target'' is the residual clique size after the identity translate is
+fixed, and ``conf.'' is the number of binary incompatibility constraints in
+the residual graph:
+\[
+\begin{array}{c|rrrrrr}
+\text{cand.} & |L(P)| & \text{req.} &
+\text{target} & \text{max} & \text{verts.} & \text{conf.}\\
+\hline
+001 & 48 & 15 & 14 & 13 & 488 & 42850\\
+013 & 24 & 30 & 29 & 28 & 313 & 6554\\
+017 & 24 & 30 & 29 & 28 & 314 & 6498\\
+019 & 24 & 30 & 29 & 28 & 314 & 6498\\
+020 & 24 & 30 & 29 & 28 & 313 & 6554
+\end{array}
+\]
+Equivalently, each maximum near-packing leaves a residual set of exactly
+one tile-size, but the residual cannot be completed by another translate.
+The laboratory also sees these cases as integer holes in ordered-triple
+marginals: the linear relaxation is feasible, but the integer decomposition
+is infeasible.
+
+The current paper does not promote these five rows to standalone theorems.
+A satisfactory upgrade would be one of the following:
+
+\begin{itemize}
+\item a compact coloring or clique-cover certificate for the residual
+      packing graph;
+\item an orbit-quotient certificate under the stabilizer of the identity
+      translate;
+\item a residual-profile lemma showing that every optimal near-packing
+      leaves a set of tile cardinality that is never a translate of $L(P)$;
+\item a proof-logged pseudo-Boolean or SAT certificate with an independent
+      verifier.
+\end{itemize}
+
+Until such certificates are extracted, the safe statement is that the
+current finite audit records a $19/38$ laboratory status split among the
+$57$ divisible non-series-parallel candidates, with five negative rows
+still awaiting compact independent certificates.  The theorem-level
+conclusion of this paper is the explicit failure of the series-parallel
+converse.

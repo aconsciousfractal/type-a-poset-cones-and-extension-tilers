@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX build byproducts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Local solver/proof experiments
+tools/
+pb_instances/
+pb_results/
+*.opb
+*.rup
+*.proof
+*.zip

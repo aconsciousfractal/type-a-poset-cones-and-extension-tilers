@@ -1,0 +1,56 @@
+S5 extension-tiler audit expected output
+Date recorded: 2026-06-06
+
+Aggregate counts
+----------------
+labeled posets: 4231
+unlabeled posets: 63
+series-parallel labeled posets: 2791
+series-parallel unlabeled posets: 48
+divisible labeled posets: 3151
+divisible unlabeled posets: 51
+non-series-parallel divisible labeled posets: 360
+non-series-parallel divisible unlabeled posets: 3
+
+Non-series-parallel divisible unlabeled types
+--------------------------------------------
+There are exactly three.
+
+Two types have |L(P)| = 5.
+One type has |L(P)| = 8.
+
+Main-text elementary obstructions
+---------------------------------
+|L(P)| = 5:
+  fixed first-letter / fixed last-letter fiber obstruction;
+  first/last fibers have size 4! = 24, and 5 does not divide 24.
+
+|L(P)| = 8:
+  ordered first-two-letter obstruction for P_empty,abd.
+
+Former rank certificates retained for audit context
+---------------------------------------------------
+For each former |L(P)| = 5 type:
+  rank_F5(M) = 115
+  rank_F5(M | 1) = 116
+
+Former packing certificate retained for audit context
+-----------------------------------------------------
+For the |L(P)| = 8 type:
+  distinct left translates = 120
+  candidates disjoint from base translate = 96
+  maximum packing containing base translate = 14
+  tiling would require = 15
+
+Boundary
+--------
+This file is a static audit record for the paper snapshot.  The S5 theorem in
+the paper is proved by the finite classification table and elementary
+obstructions in the main text.
+
+The replay script
+
+  scripts/replay_s5_extension_tiler_audit.py
+
+regenerates the aggregate counts, former mod-5 rank checks, and former packing
+check from source.

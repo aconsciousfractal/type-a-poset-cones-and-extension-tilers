@@ -1,0 +1,85 @@
+The $S_5$ classification suggests the natural converse to
+Theorem~\ref{thm:sp-extension-tiler}: perhaps every extension tiler is
+series-parallel.  This converse is false in the next rank.
+
+\begin{theorem}[A non-series-parallel extension tiler in $S_6$]
+\label{thm:s6-counterexample}
+Let $P$ be the six-element poset with cover relations
+\[
+        0<1,\qquad 1<2,\qquad 1<3,\qquad
+        4<3,\qquad 4<5,\qquad 5<2 .
+\]
+Then $P$ is not series-parallel, but $L(P)$ tiles $S_6$ by left
+translates.
+\end{theorem}
+
+\begin{proof}
+The poset contains induced copies of the forbidden $N$-poset; for example,
+the induced subposet on $\{1,2,3,5\}$ has relations
+\[
+        1<2,\qquad 1<3,\qquad 5<2,
+\]
+which is isomorphic to $N$ under
+\[
+        a\mapsto 5,\qquad b\mapsto 2,\qquad
+        c\mapsto 1,\qquad d\mapsto 3.
+\]
+Hence $P$ is not series-parallel.
+
+We now give a compact multiplier set.  Let permutations act on the labels
+of words, so that
+\[
+        g(w_1,\ldots,w_6)=(g(w_1),\ldots,g(w_6)).
+\]
+Define
+\[
+H=\langle (2\,3)(4\,5),\ (0\,1)(3\,5)\rangle,
+\]
+\[
+K=\langle (2\,3)(4\,5),\ (0\,4\,5)(1\,3\,2)\rangle,
+\]
+and let $\tau=(3\,4)$.  Put
+\[
+        A=HK\sqcup H\tau K.
+\]
+A direct computation gives
+\[
+        |L(P)|=15,\qquad |H|=8,\qquad |K|=6,
+\]
+\[
+        |HK|=|H\tau K|=24,\qquad HK\cap H\tau K=\emptyset.
+\]
+Thus $|A|=48$, which is the required number of tiles since
+$48\cdot 15=720=|S_6|$.
+
+It remains only to check disjointness.  The verification is finite:
+compute the $15$ linear extensions of $P$, form all words $a\sigma$ with
+$a\in A$ and $\sigma\in L(P)$, and count multiplicities.  The resulting
+$720$ words are all distinct.  Hence
+\[
+        S_6=\bigsqcup_{a\in A} aL(P),
+\]
+so $P$ is an extension tiler.
+\end{proof}
+
+The verification in the last paragraph is intentionally small: it uses
+only the two generated subgroups $H,K$ and the element $\tau$, rather than
+a list of $48$ multipliers.  The supplementary script
+\[
+\texttt{scripts/verify\_s6\_p038\_biset\_counterexample.py}
+\]
+reproduces the calculation and also confirms that this poset contains
+four induced copies of $N$.
+
+\begin{corollary}
+\label{cor:extension-tiler-converse-false}
+The converse of Theorem~\ref{thm:sp-extension-tiler} is false.
+\end{corollary}
+
+\begin{remark}
+The multiplier set above has visible two-sided structure: it is a union of
+two $(H,K)$-double cosets, with $H\cong D_4$ and $K\cong S_3$.  This
+suggests that non-series-parallel extension tilers in $S_6$ are not merely
+sporadic exact-cover artefacts; at least some arise from structured
+group-theoretic complements.
+\end{remark}

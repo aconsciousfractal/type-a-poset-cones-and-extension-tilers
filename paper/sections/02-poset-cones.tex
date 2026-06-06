@@ -1,0 +1,90 @@
+Let $X$ be a finite label set with $|X|=n$.  We write $S_X$ for the set of
+all bijective words on $X$, identified with the symmetric group after
+choosing an ordering of $X$.
+
+The braid arrangement of type $A_{n-1}$ has reflecting hyperplanes
+\[
+        x_i=x_j \qquad (i\ne j).
+\]
+Its chambers are total orders of the coordinates, hence are indexed by
+permutations; see, for example, the standard treatment of Coxeter groups
+in~\cite{BjornerBrenti2005}.  We use the convention that a word
+\[
+        \sigma=(\sigma_1,\ldots,\sigma_n)
+\]
+records the labels from first to last in the corresponding total order.
+
+\begin{definition}
+Let $P$ be a strict partial order on $X$.  The set of linear extensions of
+$P$ is
+\[
+        L(P)=\{\sigma\in S_X:
+        \operatorname{pos}_\sigma(a)<\operatorname{pos}_\sigma(b)
+        \text{ whenever } a<_P b\}.
+\]
+The associated poset cone is the chamber-union
+\[
+        C(P)=L(P).
+\]
+\end{definition}
+
+Here the equality $C(P)=L(P)$ means that we identify chamber-unions with
+their chamber-indexing sets.  Geometrically, the relation $a<_P b$
+selects one side of the reflecting hyperplane $x_a=x_b$.
+
+\begin{theorem}[Type-$A$ halfspace poset-cone dictionary]
+\label{thm:halfspace-poset-cone}
+In the Coxeter complex of type $A_{n-1}$, the nonempty chamber-unions
+defined by intersections of reflecting halfspaces are exactly the poset
+cones $C(P)$ for labeled posets $P$ on $X$.
+\end{theorem}
+
+\begin{proof}
+A reflecting halfspace choice for $x_i=x_j$ is exactly one precedence
+constraint, either $i<j$ or $j<i$.  If a system of such choices is
+nonempty, then the corresponding precedence constraints are acyclic; their
+transitive closure is a partial order $P$.  The chambers satisfying the
+original halfspace choices are exactly the total orders extending this
+partial order, namely $L(P)$.
+
+Conversely, every poset $P$ gives an intersection of reflecting
+halfspaces by imposing $a<b$ for each relation $a<_P b$.  The chambers in
+that intersection are precisely the linear extensions of $P$.
+\end{proof}
+
+\begin{proposition}[Orbit dictionary]
+\label{prop:orbit-dictionary}
+The natural action of $S_X$ on type-$A$ chambers sends poset cones to
+poset cones by relabeling.  Hence the $S_X$-orbits of poset cones are in
+bijection with isomorphism classes of posets on $X$.
+\end{proposition}
+
+\begin{proof}
+Applying a permutation $\tau\in S_X$ to a chamber word relabels every
+entry.  Thus the linear extensions of $P$ are sent to the linear
+extensions of the relabeled poset $\tau P$.  This proves equivariance.
+Two labeled posets lie in the same relabeling orbit exactly when they are
+isomorphic.
+\end{proof}
+
+\begin{proposition}[Connectivity]
+\label{prop:linear-extension-connected}
+Every poset cone $C(P)$ is connected in the chamber graph.
+\end{proposition}
+
+\begin{proof}
+The chamber graph of type $A$ is the adjacent-transposition graph on
+words.  The graph of linear extensions of a finite poset is connected
+\cite[Sec.~3.5]{Stanley2012}:
+given two extensions, one can move from one to the other by swapping
+adjacent incomparable elements.  These swaps are precisely chamber-graph
+adjacencies that remain inside $C(P)$.
+\end{proof}
+
+\begin{remark}
+The theorem in this section is deliberately stated for
+halfspace convexity.  In the $A_3$ tetrahedral setting, geometric,
+geodesic, and halfspace convexity coincide for connected chamber-unions.
+For arbitrary type $A_{n-1}$, that stronger equivalence is not used in
+this paper unless supplied by a separate proof or reference.
+\end{remark}

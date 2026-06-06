@@ -1,0 +1,69 @@
+\begin{definition}
+Let $P$ be a poset on a finite label set $X$.  We say that $P$ is an
+\emph{extension tiler} if there exists a set $A\subseteq S_X$ such that
+\[
+        S_X=\bigsqcup_{a\in A} aL(P).
+\]
+\end{definition}
+
+This definition packages the Coxeter-pure group-translate tiling problem
+as an exact factorization problem in the symmetric group.  The translates
+are left translates because the Coxeter group acts on chambers by left
+composition.
+
+\begin{lemma}[Relabeling invariance]
+\label{lem:relabeling-invariance}
+The extension-tiler property is invariant under relabeling of the ground
+set.
+\end{lemma}
+
+\begin{proof}
+Let $\tau:X\to Y$ be a bijection.  Relabeling sends $L(P)$ to
+$L(\tau P)$ and conjugates the corresponding left-translate family from
+$S_X$ to $S_Y$.  Therefore a disjoint cover of $S_X$ by translates of
+$L(P)$ gives a disjoint cover of $S_Y$ by translates of $L(\tau P)$.
+\end{proof}
+
+There are two equivalent finite formulations that will be used for
+certificates.
+
+\begin{definition}[Exact-cover matrix]
+Fix $P$ on $[n]$.  Let the columns be the distinct left translates
+$gL(P)$ and let the rows be the elements $\sigma\in S_n$.  Define
+\[
+        M_{\sigma,gL(P)}=
+        \begin{cases}
+        1,& \sigma\in gL(P),\\
+        0,& \text{otherwise}.
+        \end{cases}
+\]
+Then $P$ is an extension tiler if and only if the integer system
+\[
+        Mx=\mathbf 1,\qquad x\in\{0,1\}^{\#\text{columns}}
+\]
+has a solution.
+\end{definition}
+
+Reducing this system modulo a prime can prove nonexistence.  In
+Appendix~\ref{app:computational-audit}, the two former $|L(P)|=5$ audit
+certificates are recorded as $\mathbb F_5$-rank inconsistencies; the main
+$S_5$ proof below uses elementary fiber-counting obstructions instead.
+
+\begin{definition}[Packing graph]
+The packing graph of $P$ has as vertices the distinct left translates of
+$L(P)$.  Two vertices are adjacent if the corresponding translates are
+disjoint.
+\end{definition}
+
+If $|L(P)|$ divides $n!$, a tiling requires a clique of size
+$n!/|L(P)|$ in this graph.  Since left translation acts transitively on
+the translate family, any tiling can be translated so that it contains the
+base tile $L(P)$.  Thus it is enough to search for a clique of the
+required size containing the base translate.
+
+\begin{remark}
+The word ``tiler'' in this paper always means extension tiler, i.e. a
+left-translate exact factorization of a symmetric group by a set of
+linear extensions.  It is not an assertion about arbitrary ambient
+Euclidean congruences.
+\end{remark}

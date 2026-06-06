@@ -1,0 +1,58 @@
+In a companion manuscript on the regular tetrahedron~\cite{BabanskyyTetraCoxeterPure2026}, the $A_3$
+Coxeter dissection is controlled by a small but rigid combinatorial
+object: posets on four elements.  In that setting, convex chamber-unions
+are poset cones, the chamber count is the number of linear extensions, and
+the admissible convex tiling pieces are exactly the series-parallel poset
+types.  The purpose of this note is to extract the type-$A$ mechanism from
+that rank-three situation and ask what remains true in $S_n$.
+
+The general dictionary is simple.  In the braid arrangement of type
+$A_{n-1}$, choosing a side of the reflecting hyperplane $x_i=x_j$ is the
+same as imposing one precedence constraint, either $i<j$ or $j<i$.
+Compatible systems of such choices close transitively to partial orders.
+The chambers satisfying those constraints are exactly the linear
+extensions of the resulting poset.  Thus the halfspace-convex chamber
+unions in type $A$ are naturally the poset cones $C(P)$.
+
+The tiling question is more delicate.  If $P$ is a poset on $[n]$, write
+$L(P)\subseteq S_n$ for its linear extensions.  We say that $P$ is an
+extension tiler when
+\[
+        S_n=\bigsqcup_{a\in A} aL(P)
+\]
+for some set $A\subseteq S_n$.  This is a group-translate condition inside
+the Coxeter complex.  It should not be confused with a classification of
+all possible Euclidean congruent copies in an ambient geometric problem.
+
+The first main point is positive and general: every finite
+series-parallel poset is an extension tiler.  This is the mechanism already
+used in the $A_3$ Coxeter-pure paper; here we state it as a standalone
+type-$A$ theorem.
+
+The second main point begins at $n=5$.  In rank four, divisibility stops
+being a sufficient proxy for series-parallelity.  There are $51$
+unlabeled poset types on five elements for which $|L(P)|$ divides $120$,
+but only $48$ of them are series-parallel.  We prove that the remaining
+three types do not tile $S_5$ by left translates using elementary
+fiber-counting obstructions.  The former rank and packing certificates
+are retained only as an independent computational audit.
+
+The resulting general theorem is only one-sided:
+\[
+\text{series-parallel} \Longrightarrow \text{extension tiler}
+\]
+for all finite posets.  The converse is known in the previously analyzed
+$A_3/S_4$ Coxeter-pure setting and is proved here for $S_5$:
+\[
+\text{series-parallel} \Longleftrightarrow \text{extension tiler}
+\]
+in those finite test cases.  However, the next rank already produces a
+counterexample: we give a six-element non-series-parallel poset whose
+linear extensions tile $S_6$.
+
+We keep three claim levels separate throughout the paper.  The type-$A$
+poset-cone dictionary and the series-parallel tiler theorem are ordinary
+theorems.  The $S_5$ classification is also an ordinary finite theorem,
+with the computer relegated to audit status.  The $S_6$ example is a
+finite certificate that the naive converse is false; the remaining
+problem is to classify the larger class of extension tilers.

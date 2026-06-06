@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Type-A Poset Cones and Extension Tilers
+%%
+%% Author: Oleksiy Babanskyy
+%%
+%% Compile with:  pdflatex main && bibtex main && pdflatex main && pdflatex main
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Encoding & language ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+% ---------- Math ----------
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+
+% ---------- Page layout ----------
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% ---------- Hyperlinks (load late) ----------
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+\Urlmuskip=0mu plus 2mu\relax
+\setlength{\emergencystretch}{2em}
+
+\newcommand{\Sn}{S_n}
+\newcommand{\SX}{S_X}
+\newcommand{\LP}{L(P)}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\hypersetup{
+  pdftitle={Type-A Poset Cones and Extension Tilers},
+  pdfauthor={Oleksiy Babanskyy},
+  pdfsubject={Type-A Coxeter complexes, poset cones, extension tilers},
+  pdfkeywords={posets, linear extensions, Coxeter groups, braid arrangement, series-parallel posets, exact cover}
+}
+
+\title{Type-A Poset Cones and Extension Tilers}
+\author{Oleksiy Babanskyy}
+\date{}
+
+\begin{document}
+
+\pagestyle{plain}
+
+\maketitle
+
+\begin{abstract}
+We study chamber-unions in the Coxeter complex of type $A_{n-1}$ through
+the braid-arrangement dictionary between reflecting halfspaces and
+precedence constraints.  Nonempty halfspace-convex chamber-unions are
+exactly poset cones: the chambers satisfying a partial order $P$ are the
+linear extensions $L(P)$.  This turns Coxeter-pure group-translate tiling
+questions into exact factorizations of the symmetric group by sets of
+linear extensions.  We recall and isolate the general positive theorem
+that every finite series-parallel poset is an extension tiler.  We then
+give a finite classification proof for posets on five elements: among
+the $63$ unlabeled types, the extension tilers in $S_5$ are exactly the
+$48$ series-parallel types.  The three non-series-parallel types for
+which $|L(P)|$ nevertheless divides $5!$ are excluded by elementary
+fiber-counting obstructions.  A static supplementary audit file records the
+finite $S_5$ table and the former rank/packing certificates; the proof
+itself uses only the finite table and elementary obstructions.  We formulate
+and verify an explicit six-element counterexample to the converse: a
+non-series-parallel poset whose linear extensions tile $S_6$.  The
+counterexample has a compact double-coset multiplier set
+$A=HK\sqcup H\tau K$ with $H\cong D_4$ and $K\cong S_3$.  Finally, we
+record an audit-level six-element laboratory table.  It is not promoted
+to a theorem here: five obstruction-side cases remain certified only by
+bulky finite packing or integer-infeasibility data, pending short
+independently checkable certificates.
+\end{abstract}
+
+\section{Introduction}
+\input{sections/01-introduction}
+
+\section{Poset Cones in Type A}
+\input{sections/02-poset-cones}
+
+\section{Extension Tilers}
+\input{sections/03-extension-tilers}
+
+\section{Series-Parallel Posets Tile}
+\input{sections/04-series-parallel}
+
+\section{The \texorpdfstring{$S_5$}{S5} Classification}
+\input{sections/05-s5-classification}
+
+\section{A Counterexample in \texorpdfstring{$S_6$}{S6}}
+\input{sections/06-s6-counterexample}
+
+\section{Audit-Level \texorpdfstring{$S_6$}{S6} Laboratory Status}
+\input{sections/07-s6-laboratory}
+
+\section{Open Problems and Certificate-Compression Targets}
+\input{sections/08-open-problems}
+
+\appendix
+\section{Profile Quotient Check}
+\label{app:profile-quotient}
+\input{sections/A-profile-quotient}
+
+\section{Computational Audit}
+\label{app:computational-audit}
+\input{sections/A-certificates}
+
+\section*{Data and Code Availability}
+The reproducibility boundary for this snapshot is recorded in
+\path{README_REPRODUCE.md}.  The theorem-level six-element
+counterexample is checked by
+\path{scripts/verify_s6_p038_biset_counterexample.py}.  The five-element
+finite audit can be replayed with
+\path{scripts/replay_s5_extension_tiler_audit.py}.  The broader
+six-element laboratory table is stored as audit-level data in
+\path{03-certificates/s6_classification_status.md} and
+\path{03-certificates/s6_classification_status.json}.  Historical
+Colab/RoundingSat files for the five hard cases are retained only as an
+audit trail and are not proof certificates.
+
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\end{document}

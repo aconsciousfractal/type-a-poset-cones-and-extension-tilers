@@ -1,0 +1,116 @@
+This appendix records the independent computational audit for
+Theorem~\ref{thm:s5-classification}.  The theorem itself is proved in the
+main text by finite classification and fiber counts.  The current
+repository snapshot stores the expected audit output in
+\[
+\texttt{../03-certificates/s5\_expected\_output.txt}.
+\]
+The current replay script
+\[
+\texttt{../scripts/replay\_s5\_extension\_tiler\_audit.py}
+\]
+reproduces the aggregate S5 counts and the former rank and packing audit
+certificates.  These computations are retained as independent audit
+support; the proof of Theorem~\ref{thm:s5-classification} remains the
+finite table plus the elementary obstructions in the main text.
+
+The six-element counterexample in Theorem~\ref{thm:s6-counterexample} has
+a separate self-contained verifier:
+\[
+\texttt{../scripts/verify\_s6\_p038\_biset\_counterexample.py}.
+\]
+It reconstructs the poset, the subgroups $H,K$, the multiplier set
+$A=HK\sqcup H\tau K$, and checks that the $48$ translates of the
+$15$-element tile cover all $720$ elements of $S_6$ exactly once.
+
+The broader six-element laboratory status is recorded in
+\[
+\texttt{../03-certificates/s6\_classification\_status.md}
+\]
+and in the companion JSON file with the same base name.  Historical
+Colab/RoundingSat artifacts for the five hard residual-clique cases are
+kept as an audit trail only; the note
+\[
+\texttt{../03-certificates/legacy\_colab\_artifacts.md}
+\]
+marks them as timeout/UNKNOWN exploration rather than proof certificates.
+
+\subsection*{Aggregate counts}
+
+The script verifies:
+\[
+\begin{array}{lr}
+\text{labeled posets} & 4231,\\
+\text{unlabeled posets} & 63,\\
+\text{series-parallel labeled posets} & 2791,\\
+\text{series-parallel unlabeled posets} & 48,\\
+\text{divisible labeled posets} & 3151,\\
+\text{divisible unlabeled posets} & 51,\\
+\text{non-series-parallel divisible labeled posets} & 360,\\
+\text{non-series-parallel divisible unlabeled posets} & 3.
+\end{array}
+\]
+
+\subsection*{The former rank obstructions}
+
+For the first $|L(P)|=5$ type, one representative has transitive
+relations
+\[
+\begin{gathered}
+(0,1),(0,2),(0,3),(0,4),\\
+(1,2),(1,3),(4,2).
+\end{gathered}
+\]
+Its linear extensions are
+\[
+\begin{gathered}
+(0,1,3,4,2),\quad (0,1,4,2,3),\quad
+(0,1,4,3,2),\\
+(0,4,1,2,3),\quad (0,4,1,3,2).
+\end{gathered}
+\]
+The certificate is
+\[
+        \operatorname{rank}_{\mathbb F_5}(M)=115,\qquad
+        \operatorname{rank}_{\mathbb F_5}(M\mid \mathbf 1)=116.
+\]
+
+For the second $|L(P)|=5$ type, one representative has transitive
+relations
+\[
+(0,1),(0,2),(0,3),(1,2),(3,2),(4,1),(4,2).
+\]
+Its linear extensions are
+\[
+\begin{gathered}
+(0,3,4,1,2),\quad (0,4,1,3,2),\quad
+(0,4,3,1,2),\\
+(4,0,1,3,2),\quad (4,0,3,1,2).
+\end{gathered}
+\]
+The same rank certificate holds:
+\[
+        \operatorname{rank}_{\mathbb F_5}(M)=115,\qquad
+        \operatorname{rank}_{\mathbb F_5}(M\mid \mathbf 1)=116.
+\]
+
+\subsection*{The former packing obstruction}
+
+For the $|L(P)|=8$ type, one representative has transitive relations
+\[
+(0,1),(0,2),(0,3),(1,2),(4,2),(4,3).
+\]
+Its linear extensions are
+\[
+\begin{gathered}
+(0,1,4,2,3),\quad (0,1,4,3,2),\quad
+(0,4,1,2,3),\quad (0,4,1,3,2),\\
+(0,4,3,1,2),\quad (4,0,1,2,3),\quad
+(4,0,1,3,2),\quad (4,0,3,1,2).
+\end{gathered}
+\]
+The translate family has $120$ distinct left translates.  Among the
+translates disjoint from the base translate there are $96$ candidates,
+and the maximum packing containing the base translate has size $14$.
+Since a tiling would require $15$ translates, this type is not an
+extension tiler.

@@ -1,0 +1,103 @@
+Let $P$ and $Q$ be posets on disjoint ground sets.  Their
+\emph{series composition} $P;Q$ keeps the internal relations of $P$ and
+$Q$ and adds $p<q$ for every $p\in P$ and $q\in Q$.  Their
+\emph{parallel composition} $P\|Q$ keeps the internal relations and adds
+no cross-relations.  A finite poset is series-parallel if it is obtained
+from one-element posets by iterating these two operations.  Equivalently,
+finite series-parallel posets are the $N$-free posets: this is the
+Valdes--Tarjan--Lawler characterization applied to the transitive directed
+comparability graph of the poset~\cite{ValdesTarjanLawler1982}.
+
+\begin{lemma}[Extension counts]
+\label{lem:extension-counts}
+If $|P|=p$ and $|Q|=q$, then
+\[
+        |L(P;Q)|=|L(P)|\,|L(Q)|
+\]
+and
+\[
+        |L(P\|Q)|=\binom{p+q}{p}|L(P)|\,|L(Q)|.
+\]
+\end{lemma}
+
+\begin{proof}
+For $P;Q$, every element of $P$ must precede every element of $Q$, so a
+linear extension is an extension of $P$ followed by an extension of $Q$.
+
+For $P\|Q$, choose the $p$ positions occupied by the elements of $P$,
+fill them by a linear extension of $P$, and fill the remaining positions
+by a linear extension of $Q$.
+\end{proof}
+
+\begin{lemma}[Series closure]
+\label{lem:series-closure}
+If $P_1$ and $P_2$ are extension tilers, then $P_1;P_2$ is an extension
+tiler.
+\end{lemma}
+
+\begin{proof}
+Let $|P_1|=p$, $|P_2|=q$, and let $X$ be a label set of size $p+q$.
+Given a word $\sigma\in S_X$, let $Y$ be the set of the first $p$ letters
+of $\sigma$ and let $Z=X\setminus Y$.
+
+In a linear extension of a series composition, the label set of the first
+component is forced to appear before the label set of the second
+component.  Therefore $Y$ is forced for any tile containing $\sigma$.
+Restrict $\sigma$ to its subwords on $Y$ and on $Z$.  By relabeling
+invariance and the extension-tiler property of $P_1$ and $P_2$, these
+subwords lie in unique component tiles.  Combining those two component
+tiles gives a tile for a relabeling of $P_1;P_2$ containing $\sigma$.
+
+The forced block $Y$ and uniqueness inside the two component tilings give
+disjointness.  Hence the constructed family is a partition of $S_X$.
+\end{proof}
+
+\begin{lemma}[Parallel closure]
+\label{lem:parallel-closure}
+If $P_1$ and $P_2$ are extension tilers, then $P_1\|P_2$ is an extension
+tiler.
+\end{lemma}
+
+\begin{proof}
+Let $|P_1|=p$, $|P_2|=q$, and fix one decomposition
+$X=Y\sqcup Z$ with $|Y|=p$ and $|Z|=q$.  Given
+$\sigma\in S_X$, read the subword $\sigma|_Y$ and the subword
+$\sigma|_Z$.  By relabeling the component tilings to the arbitrary label
+sets $Y$ and $Z$, these determine unique relabeled tiles for $P_1$ on
+$Y$ and for $P_2$ on $Z$.
+
+Since parallel composition adds no cross-relations, every shuffle of a
+linear extension from the first component with a linear extension from
+the second component is a linear extension of the parallel composition.
+Thus the two component tiles determine a tile of $P_1\|P_2$ containing
+$\sigma$.  Disjointness follows from the uniqueness of the two subwords'
+component tiles.
+\end{proof}
+
+\begin{theorem}[Series-parallel extension-tiler theorem]
+\label{thm:sp-extension-tiler}
+Every finite series-parallel poset is an extension tiler.
+\end{theorem}
+
+\begin{proof}
+The one-element poset is an extension tiler.  By
+Lemmas~\ref{lem:series-closure} and~\ref{lem:parallel-closure}, the class of extension
+tilers is closed under series and parallel composition.  Therefore every
+poset built from singletons by these operations is an extension tiler.
+\end{proof}
+
+\begin{corollary}
+If $P$ is series-parallel on $n$ elements, then $|L(P)|$ divides $n!$.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:sp-extension-tiler}, $S_n$ is a disjoint union of
+translates of $L(P)$, so $|L(P)|$ divides $|S_n|=n!$.
+\end{proof}
+
+\begin{remark}
+The converse divisibility statement is false for $n=5$: there are
+non-series-parallel posets on five elements with $|L(P)|$ dividing
+$120$.  The next section certifies that these divisible false positives
+still do not tile by left translates.
+\end{remark}
