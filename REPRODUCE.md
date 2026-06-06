@@ -20,23 +20,22 @@ The requirements file is intentionally empty except for comments.
 From `paper/`:
 
 ```bash
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-bibtex main
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error "Type-A Poset Cones and Extension Tilers.tex"
+bibtex "Type-A Poset Cones and Extension Tilers"
+pdflatex -interaction=nonstopmode -halt-on-error "Type-A Poset Cones and Extension Tilers.tex"
+pdflatex -interaction=nonstopmode -halt-on-error "Type-A Poset Cones and Extension Tilers.tex"
 ```
 
 Current canonical PDF:
 
 ```text
-paper/main.pdf
-pages = 14
-bytes = 398078
-sha256 = 226BDCB3BD680D04DFEAB6DC0B7EAC8A630F7656C1B9959E1153389F072A2752
+paper/Type-A Poset Cones and Extension Tilers.pdf
+pages = 15
+bytes = 404972
+sha256 = 5FC09ECC3EAC9DD4CB3FC75B463FD15185C18D00E95A0371918E5F97AB913632
 ```
 
-The named copy `paper/Type-A Poset Cones and Extension Tilers.pdf` has the
-same hash.
+The paper source is `paper/Type-A Poset Cones and Extension Tilers.tex`.
 
 ## Verify The S6 Counterexample
 

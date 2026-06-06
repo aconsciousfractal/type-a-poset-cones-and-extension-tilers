@@ -2,7 +2,7 @@ red_team_pass:
   id: s6_paper_red_team_readthrough_2026_06_06
   date: "2026-06-06"
   scope:
-    - paper/main.tex
+    - "paper/Type-A Poset Cones and Extension Tilers.tex"
     - paper/sections/*.tex
     - scripts/verify_s6_p038_biset_counterexample.py
     - certificates/s6_classification_status.md
@@ -44,9 +44,9 @@ red_team_pass:
   verification:
     p038_verifier: PASS
     latex_build: PASS
-    main_pdf_pages: 14
-    main_pdf_bytes: 398078
-    main_pdf_sha256: 226BDCB3BD680D04DFEAB6DC0B7EAC8A630F7656C1B9959E1153389F072A2752
+    paper_pdf_pages: 15
+    paper_pdf_bytes: 404972
+    paper_pdf_sha256: 5FC09ECC3EAC9DD4CB3FC75B463FD15185C18D00E95A0371918E5F97AB913632
     s5_replay: PASS
     undefined_reference_count: 0
     citation_warning_count: 0

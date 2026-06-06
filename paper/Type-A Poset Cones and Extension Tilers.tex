@@ -3,7 +3,11 @@
 %%
 %% Author: Oleksiy Babanskyy
 %%
-%% Compile with:  pdflatex main && bibtex main && pdflatex main && pdflatex main
+%% Compile with:
+%%   pdflatex "Type-A Poset Cones and Extension Tilers.tex"
+%%   bibtex "Type-A Poset Cones and Extension Tilers"
+%%   pdflatex "Type-A Poset Cones and Extension Tilers.tex"
+%%   pdflatex "Type-A Poset Cones and Extension Tilers.tex"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt,a4paper]{article}
@@ -124,14 +128,14 @@ independently checkable certificates.
 
 \section*{Data and Code Availability}
 The reproducibility boundary for this snapshot is recorded in
-\path{README_REPRODUCE.md}.  The theorem-level six-element
+\path{REPRODUCE.md}.  The theorem-level six-element
 counterexample is checked by
 \path{scripts/verify_s6_p038_biset_counterexample.py}.  The five-element
 finite audit can be replayed with
 \path{scripts/replay_s5_extension_tiler_audit.py}.  The broader
 six-element laboratory table is stored as audit-level data in
-\path{03-certificates/s6_classification_status.md} and
-\path{03-certificates/s6_classification_status.json}.  Historical
+\path{certificates/s6_classification_status.md} and
+\path{certificates/s6_classification_status.json}.  Historical
 Colab/RoundingSat files for the five hard cases are retained only as an
 audit trail and are not proof certificates.
 

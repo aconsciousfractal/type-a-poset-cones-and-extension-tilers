@@ -16,7 +16,7 @@ alignment under the local PAPP red-team rules used during preparation.
 Manuscript:
 
 ```text
-paper/main.tex
+paper/Type-A Poset Cones and Extension Tilers.tex
 paper/sections/*.tex
 ```
 
@@ -85,10 +85,10 @@ certificates/legacy_colab_artifacts.md
 
 ```text
 python scripts/verify_s6_p038_biset_counterexample.py
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error "Type-A Poset Cones and Extension Tilers.tex"
 python -m json.tool certificates/s6_classification_status.json
-Select-String paper/**/*.tex paper/main.tex for task markers and stale overclaim phrases
-Select-String paper/main.log for LaTeX warnings, undefined references, citations, overfull/underfull boxes, rerun warnings
+Select-String paper/**/*.tex "paper/Type-A Poset Cones and Extension Tilers.tex" for task markers and stale overclaim phrases
+Select-String paper/*.log for LaTeX warnings, undefined references, citations, overfull/underfull boxes, rerun warnings
 ```
 
 ## Verification Result
@@ -112,8 +112,8 @@ PASS
 LaTeX:
 
 ```text
-main.pdf pages = 14
-main.pdf bytes = 398078
+paper PDF pages = 15
+paper PDF bytes = 404972
 undefined_reference_count = 0
 citation_warning_count = 0
 meaningful_latex_warning_count = 0

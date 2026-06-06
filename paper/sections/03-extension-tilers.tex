@@ -10,6 +10,11 @@ This definition packages the Coxeter-pure group-translate tiling problem
 as an exact factorization problem in the symmetric group.  The translates
 are left translates because the Coxeter group acts on chambers by left
 composition.
+Related tiling questions in symmetric groups can be phrased through
+partition-transitivity and permutation modules; see Martin--Sagan for the
+general notion of $\lambda$-transitivity~\cite{MartinSagan2006} and
+Fang--Xia for a recent symmetric-group tiling problem where such
+conditions are used explicitly~\cite{FangXia2026}.
 
 \begin{lemma}[Relabeling invariance]
 \label{lem:relabeling-invariance}
@@ -48,6 +53,9 @@ Reducing this system modulo a prime can prove nonexistence.  In
 Appendix~\ref{app:computational-audit}, the two former $|L(P)|=5$ audit
 certificates are recorded as $\mathbb F_5$-rank inconsistencies; the main
 $S_5$ proof below uses elementary fiber-counting obstructions instead.
+The underlying enumeration is intentionally finite and small; in general,
+counting linear extensions is computationally difficult
+\cite{BrightwellWinkler1991}.
 
 \begin{definition}[Packing graph]
 The packing graph of $P$ has as vertices the distinct left translates of

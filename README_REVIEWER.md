@@ -51,7 +51,7 @@ only retained as audit trail notes in `certificates/legacy_colab_artifacts.md`.
 ## Files To Inspect First
 
 ```text
-paper/main.tex
+paper/Type-A Poset Cones and Extension Tilers.tex
 paper/sections/06-s6-counterexample.tex
 paper/sections/07-s6-laboratory.tex
 docs/CLAIM_LEDGER.md
