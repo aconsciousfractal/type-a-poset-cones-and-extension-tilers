@@ -1,5 +1,5 @@
-cff-version: 1.2.0
-message: "If you use this software or paper companion package, please cite it as below."
+﻿cff-version: 1.2.0
+message: "If you use this repository, please cite it as below. Code is MIT-licensed; paper text and PDF artifacts are CC-BY-4.0 as specified in LICENSE."
 title: "Type-A Poset Cones and Extension Tilers"
 type: software
 authors:
