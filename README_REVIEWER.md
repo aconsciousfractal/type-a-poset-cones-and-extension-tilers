@@ -26,7 +26,9 @@ The paper promotes:
 - the type-A poset-cone dictionary;
 - the positive theorem for series-parallel posets;
 - the full `S5` classification;
-- the explicit non-series-parallel `S6` extension tiler `P038`.
+- the explicit non-series-parallel `S6` extension tiler `P038`;
+- the order-polytope tiling of `[0,1]^6` induced by the same `P038`
+  factorization.
 
 ## What Is Audit-Level Only
 
@@ -53,6 +55,7 @@ only retained as audit trail notes in `certificates/legacy_colab_artifacts.md`.
 ```text
 paper/Type-A Poset Cones and Extension Tilers.tex
 paper/sections/06-s6-counterexample.tex
+paper/sections/07-order-polytope-cube-tilings.tex
 paper/sections/07-s6-laboratory.tex
 docs/CLAIM_LEDGER.md
 docs/PUBLIC_CLAIM_BOUNDARY.md

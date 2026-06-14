@@ -127,6 +127,35 @@ Consequence:
 The converse "extension tiler => series-parallel" is false.
 ```
 
+### CL5/CL3 - Order-Polytope Cube Tiling
+
+Statement:
+
+```text
+If S_X is tiled by left translates a L(P), then [0,1]^X is tiled by the
+coordinate-permuted order polytopes a O(P) along the standard cube
+triangulation.
+```
+
+P038 consequence:
+
+```text
+[0,1]^6 is tiled by 48 coordinate-permuted copies of O(P038).
+```
+
+Status:
+
+```text
+paper corollary / deterministic consequence of the P038 exact factorization
+```
+
+Boundary:
+
+```text
+This is not a claim about arbitrary Euclidean congruent copies and does not
+use the projected PAPP/flux visual artifacts.
+```
+
 ## Laboratory Claims Not Promoted To Theorem
 
 ### CL3-Lab - S6 19/38 Audit
@@ -206,6 +235,7 @@ Can say:
 ```text
 The series-parallel converse is false in S6.
 P038 is a compact non-series-parallel extension tiler.
+P038 gives a 48-piece order-polytope tiling of the 6-cube.
 The current S6 laboratory audit reports a structured 19/38 split among
 non-series-parallel divisible candidates.
 ```

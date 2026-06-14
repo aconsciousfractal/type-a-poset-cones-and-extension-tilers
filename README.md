@@ -16,6 +16,8 @@ snapshot are:
 - for `S5`, the extension tilers are exactly the series-parallel posets;
 - in `S6`, the converse fails: candidate `P038` is a non-series-parallel
   extension tiler with a compact double-coset witness;
+- the `P038` witness also gives a coordinate-permutation tiling of `[0,1]^6`
+  by 48 copies of its order polytope, via the standard cube triangulation;
 - the broader `S6` audit records a structured `19/38` laboratory split among
   the `57` divisible non-series-parallel candidates, but this split is not
   promoted to a theorem in this paper.
@@ -61,10 +63,11 @@ pdflatex -interaction=nonstopmode -halt-on-error "Type-A Poset Cones and Extensi
 
 ## Claim Boundary
 
-The theorem-level objects are the `S5` classification and the explicit `S6`
-counterexample `P038`.  The broader `S6` table is retained as audit-level
-laboratory status because five obstruction-side cases still lack compact
-portable certificates:
+The theorem-level objects are the `S5` classification, the explicit `S6`
+counterexample `P038`, and the order-polytope cube-tiling corollary that
+follows from the same factorization.  The broader `S6` table is retained as
+audit-level laboratory status because five obstruction-side cases still lack
+compact portable certificates:
 
 ```text
 001, 013, 017, 019, 020

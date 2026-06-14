@@ -8,6 +8,8 @@ This package is public-facing but intentionally conservative.
 - Every finite series-parallel poset is an extension tiler.
 - On five elements, extension tilers are exactly series-parallel posets.
 - The six-element poset `P038` is a non-series-parallel extension tiler.
+- The same `P038` factorization gives a coordinate-permutation tiling of
+  `[0,1]^6` by 48 copies of the order polytope of `P038`.
 
 ## Laboratory-Level Only
 

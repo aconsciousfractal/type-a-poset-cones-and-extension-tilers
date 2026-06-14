@@ -86,11 +86,14 @@ itself uses only the finite table and elementary obstructions.  We formulate
 and verify an explicit six-element counterexample to the converse: a
 non-series-parallel poset whose linear extensions tile $S_6$.  The
 counterexample has a compact double-coset multiplier set
-$A=HK\sqcup H\tau K$ with $H\cong D_4$ and $K\cong S_3$.  Finally, we
-record an audit-level six-element laboratory table.  It is not promoted
-to a theorem here: five obstruction-side cases remain certified only by
-bulky finite packing or integer-infeasibility data, pending short
-independently checkable certificates.
+$A=HK\sqcup H\tau K$ with $H\cong D_4$ and $K\cong S_3$.  Through the
+standard triangulation of the unit cube, this same factorization gives a
+coordinate-permutation tiling of $[0,1]^6$ by $48$ copies of the order
+polytope of the counterexample.  Finally, we record an audit-level
+six-element laboratory table.  It is not promoted to a theorem here: five
+obstruction-side cases remain certified only by bulky finite packing or
+integer-infeasibility data, pending short independently checkable
+certificates.
 \end{abstract}
 
 \section{Introduction}
@@ -111,6 +114,10 @@ independently checkable certificates.
 \section{A Counterexample in \texorpdfstring{$S_6$}{S6}}
 \input{sections/06-s6-counterexample}
 
+\section{Order-Polytope Cube Tilings}
+\label{sec:order-polytope-cube-tilings}
+\input{sections/07-order-polytope-cube-tilings}
+
 \section{Audit-Level \texorpdfstring{$S_6$}{S6} Laboratory Status}
 \input{sections/07-s6-laboratory}
 
@@ -130,8 +137,10 @@ independently checkable certificates.
 The reproducibility boundary for this snapshot is recorded in
 \path{REPRODUCE.md}.  The theorem-level six-element
 counterexample is checked by
-\path{scripts/verify_s6_p038_biset_counterexample.py}.  The five-element
-finite audit can be replayed with
+\path{scripts/verify_s6_p038_biset_counterexample.py}.  The order-polytope
+cube-tiling corollary is a deterministic consequence of the same exact
+factorization and does not depend on any projected visual artifact.  The
+five-element finite audit can be replayed with
 \path{scripts/replay_s5_extension_tiler_audit.py}.  The broader
 six-element laboratory table is stored as audit-level data in
 \path{certificates/s6_classification_status.md} and

@@ -1,0 +1,95 @@
+We record the geometric shadow of an extension-tiler factorization.  This
+section uses only the standard order polytope of a poset and the standard
+simplex triangulation of the cube; no projected picture or flux
+materialization is part of the proof.
+
+Let $P$ be a poset on a finite label set $X$, with $|X|=n$.  Its order
+polytope is
+\[
+        \mathcal O(P)=
+        \{x\in [0,1]^X : x_i\le x_j \text{ whenever } i<_P j\},
+\]
+in the sense of Stanley~\cite{Stanley1986}.  For a word
+$\sigma=(\sigma_1,\ldots,\sigma_n)\in S_X$, let
+\[
+        \Delta_\sigma =
+        \{x\in [0,1]^X :
+        0\le x_{\sigma_1}\le x_{\sigma_2}\le\cdots
+        \le x_{\sigma_n}\le 1\}.
+\]
+The closed simplices $\Delta_\sigma$, for $\sigma\in S_X$, form the
+standard triangulation of the unit cube, with disjoint relative interiors.
+
+\begin{lemma}
+\label{lem:order-polytope-standard-triangulation}
+For every finite poset $P$ on $X$,
+\[
+        \mathcal O(P)=\bigcup_{\sigma\in L(P)}\Delta_\sigma .
+\]
+\end{lemma}
+
+\begin{proof}
+If $\sigma$ is a linear extension of $P$, then $i<_P j$ implies that
+$i$ occurs before $j$ in $\sigma$, so every point of $\Delta_\sigma$
+satisfies $x_i\le x_j$.  Thus $\Delta_\sigma\subseteq \mathcal O(P)$.
+
+Conversely, every point $x\in [0,1]^X$ lies in at least one simplex of the
+standard triangulation, obtained by ordering the coordinates and breaking
+ties arbitrarily.  If $x\in\mathcal O(P)$, the tie-breaking can be chosen
+so that $i<_P j$ places $i$ no later than $j$.  The resulting word is a
+linear extension of $P$, and $x$ lies in the corresponding
+$\Delta_\sigma$.
+\end{proof}
+
+For $a\in S_X$, write
+\[
+        a\mathcal O(P)=\bigcup_{\sigma\in L(P)}\Delta_{a\sigma},
+\]
+where $a$ acts on the labels in the word.  Equivalently, this is the
+coordinate-relabeling of $\mathcal O(P)$ by $a$.
+
+\begin{proposition}[Extension tilers give cube tilings]
+\label{prop:extension-tiler-order-polytope-cube-tiling}
+Suppose that $P$ is an extension tiler on $X$, so that
+\[
+        S_X=\bigsqcup_{a\in A} aL(P).
+\]
+Then the coordinate-permuted order polytopes $a\mathcal O(P)$ tile the
+unit cube:
+\[
+        [0,1]^X=\bigcup_{a\in A} a\mathcal O(P),
+\]
+with overlaps only along faces of the standard simplex triangulation.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:order-polytope-standard-triangulation}, the pieces
+$a\mathcal O(P)$ are unions of the standard cube simplices indexed by
+the words in $aL(P)$.  The assumed disjoint union
+$S_X=\bigsqcup_{a\in A}aL(P)$ assigns each standard simplex to exactly
+one piece.  Since the standard simplices tile the cube and have disjoint
+relative interiors, the stated cube tiling follows.
+\end{proof}
+
+\begin{corollary}[The $P038$ order-polytope cube tiling]
+\label{cor:p038-order-polytope-cube-tiling}
+For the poset $P$ of Theorem~\ref{thm:s6-counterexample}, the unit cube
+$[0,1]^6$ is tiled, up to shared boundaries, by the $48$ coordinate
+permutations $a\mathcal O(P)$ with $a\in A=HK\sqcup H\tau K$.  Each copy
+has volume $15/720=1/48$.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:s6-counterexample} gives
+$S_6=\bigsqcup_{a\in A}aL(P)$ with $|A|=48$ and $|L(P)|=15$.
+Apply Proposition~\ref{prop:extension-tiler-order-polytope-cube-tiling}.
+The volume statement follows either from the $15$ standard simplices in
+$\mathcal O(P)$ or from the $48$-piece cube tiling.
+\end{proof}
+
+\begin{remark}
+This is a coordinate-permutation tiling inherited from the braid-arrangement
+triangulation.  It is not a statement about arbitrary Euclidean congruent
+copies, and it is independent of any three-dimensional projected model used
+for visualization.
+\end{remark}

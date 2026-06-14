@@ -43,3 +43,36 @@ compression problem for:
 ```
 
 These are not needed for the theorem-level `P038` counterexample.
+
+## 2026-06-14 Addendum - Order-Polytope Cube Tiling
+
+Scope: checked the new `Order-Polytope Cube Tilings` section and its public
+claim-boundary updates.
+
+Verdict:
+
+```text
+GO
+```
+
+Checks:
+
+- The new theorem-level statement is a deterministic consequence of
+  `S_X = disjoint union a L(P)` and the standard cube triangulation.
+- The `P038` corollary uses the already verified `48 * 15 = 720`
+  factorization; it does not add a new finite search claim.
+- The paper does not include the exploratory PAPP flux, OBJ, or tube-mesh
+  artifacts as proof figures.
+- The wording distinguishes coordinate-permutation cube tilings from arbitrary
+  Euclidean congruent-copy tilings.
+- The broader `S6` `19/38` laboratory split remains audit-level only.
+
+Verification run:
+
+```text
+pdflatex/bibtex/pdflatex/pdflatex: PASS
+scripts/verify_s6_p038_biset_counterexample.py: PASS
+scripts/replay_s5_extension_tiler_audit.py: PASS
+python -m json.tool certificates/s6_classification_status.json: PASS
+MANIFEST_SHA256.txt: PASS
+```

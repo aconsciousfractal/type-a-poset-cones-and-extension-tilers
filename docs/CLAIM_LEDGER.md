@@ -55,6 +55,18 @@ scripts/verify_s6_p038_biset_counterexample.py
 
 Status: paper theorem / exact finite construction.
 
+### Order-Polytope Cube Tiling
+
+Any extension-tiler factorization `S_X = disjoint union a L(P)` induces a
+tiling of the unit cube `[0,1]^X` by coordinate-permuted copies of the order
+polytope `O(P)`, using the standard simplex triangulation of the cube.
+
+For `P038`, this gives a tiling of `[0,1]^6` by 48 coordinate-permuted copies
+of `O(P038)`.
+
+Status: paper corollary / deterministic consequence of the exact finite
+construction.
+
 ## Audit-Level Claims
 
 ### S6 19/38 Laboratory Status
@@ -80,6 +92,7 @@ Can say:
 ```text
 The series-parallel converse is false in S6.
 P038 is a compact non-series-parallel extension tiler.
+P038 also gives a 48-piece order-polytope tiling of the 6-cube.
 The current S6 laboratory audit reports a structured 19/38 split.
 ```
 

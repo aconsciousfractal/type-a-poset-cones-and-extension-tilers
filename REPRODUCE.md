@@ -30,9 +30,9 @@ Current canonical PDF:
 
 ```text
 paper/Type-A Poset Cones and Extension Tilers.pdf
-pages = 15
-bytes = 404972
-sha256 = 5FC09ECC3EAC9DD4CB3FC75B463FD15185C18D00E95A0371918E5F97AB913632
+pages = 16
+bytes = 418231
+sha256 = FF1A8A818072FB18343042CF93FEA1FF8F2978EFF83569155F3B64FFFAAE22F5
 ```
 
 The paper source is `paper/Type-A Poset Cones and Extension Tilers.tex`.
@@ -60,6 +60,10 @@ multiplicities = [1]
 induced N copies = 4
 PASS
 ```
+
+The order-polytope cube-tiling corollary in the paper is a direct consequence
+of this same exact factorization.  No additional visual or numerical artifact
+is needed for the proof.
 
 ## Replay The S5 Audit
 

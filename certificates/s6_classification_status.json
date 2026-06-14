@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-14",
   "paper_grade": {
     "counterexample": {
       "id": "P038",
@@ -22,7 +22,15 @@
         "covered_permutations": 720,
         "multiplicities": [1]
       },
-      "verifier": "scripts/verify_s6_p038_biset_counterexample.py"
+      "verifier": "scripts/verify_s6_p038_biset_counterexample.py",
+      "order_polytope_cube_tiling": {
+        "status": "paper corollary",
+        "cube": "[0,1]^6",
+        "copies": 48,
+        "copy_volume": "1/48",
+        "source": "standard cube triangulation plus S6 = disjoint union a L(P038)",
+        "boundary": "coordinate-permutation tiling; not a projected visual artifact"
+      }
     }
   },
   "laboratory_status": {
@@ -107,6 +115,7 @@
     "include_now": [
       "S5 classification theorem",
       "P038 S6 counterexample theorem",
+      "P038 order-polytope cube-tiling corollary",
       "corollary that the extension-tiler converse is false",
       "open problem: classify all extension tilers"
     ],

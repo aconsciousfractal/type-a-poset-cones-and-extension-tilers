@@ -1,6 +1,6 @@
 # S6 Classification Status
 
-Date: 2026-06-06
+Date: 2026-06-14
 
 This note separates paper-grade facts from computational laboratory status for
 the six-element extension-tiler problem.
@@ -56,6 +56,10 @@ HK cap H tau K = empty
 ```
 
 The translates `a L(P038)`, for `a in A`, partition `S_6`.
+
+By the standard simplex triangulation of the unit cube, the same
+factorization also gives a coordinate-permutation tiling of `[0,1]^6` by 48
+copies of the order polytope `O(P038)`.
 
 Verifier:
 
@@ -186,6 +190,7 @@ The current paper should include:
 ```text
 S5 classification theorem
 P038 S6 counterexample theorem
+P038 order-polytope cube-tiling corollary
 corollary: the extension-tiler converse is false
 open problem: classify extension tilers, especially the S6 non-SP families
 ```
