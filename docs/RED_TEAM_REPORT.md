@@ -76,3 +76,44 @@ scripts/replay_s5_extension_tiler_audit.py: PASS
 python -m json.tool certificates/s6_classification_status.json: PASS
 MANIFEST_SHA256.txt: PASS
 ```
+
+## 2026-06-14 External Red-Team Follow-Up
+
+Scope: checked an external readthrough of the order-polytope corollary,
+abstract, data availability statement, and audit-level `S6` wording.
+
+Verdict:
+
+```text
+GO after wording fixes
+```
+
+Fixes applied:
+
+- The abstract now says the cube tiling holds up to shared faces of the
+  standard triangulation.
+- The five hard obstruction-side rows are described as negative audit rows
+  still lacking compact independent certificates, not as theorem-level
+  exclusions with compact paper certificates.
+- The `S6` status table separates `audit-unclassified survivors = 0` from
+  the five negative rows still lacking compact independent certificates.
+- The defect-one residual packing statement is explicitly attributed to the
+  audit computation and audit data.
+- The order-polytope coordinate action now defines `T_a` before using
+  `a O(P)`.
+- The corollary introduces `P038` as the supplementary enumeration label.
+- Internal visualization language was removed from the proof-facing text.
+- The data/code statement now includes the public repository URL and points
+  standalone readers to the manifest hashes.
+
+Verification run after follow-up fixes:
+
+```text
+pdflatex/pdflatex: PASS
+scripts/verify_s6_p038_biset_counterexample.py: PASS
+scripts/replay_s5_extension_tiler_audit.py: PASS
+python -m json.tool certificates/s6_classification_status.json: PASS
+MANIFEST_SHA256.txt: PASS
+LaTeX log red-team scan: PASS
+fragile-wording scan: PASS
+```

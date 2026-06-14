@@ -89,11 +89,11 @@ counterexample has a compact double-coset multiplier set
 $A=HK\sqcup H\tau K$ with $H\cong D_4$ and $K\cong S_3$.  Through the
 standard triangulation of the unit cube, this same factorization gives a
 coordinate-permutation tiling of $[0,1]^6$ by $48$ copies of the order
-polytope of the counterexample.  Finally, we record an audit-level
-six-element laboratory table.  It is not promoted to a theorem here: five
-obstruction-side cases remain certified only by bulky finite packing or
-integer-infeasibility data, pending short independently checkable
-certificates.
+polytope of the counterexample, up to shared faces of the standard
+triangulation.  Finally, we record an audit-level six-element laboratory
+table.  It is not promoted to a theorem here: five negative audit rows
+remain supported only by bulky finite audit data, pending short
+independently checkable certificates.
 \end{abstract}
 
 \section{Introduction}
@@ -134,8 +134,17 @@ certificates.
 \input{sections/A-certificates}
 
 \section*{Data and Code Availability}
+The public repository is:
+\begin{center}
+\small
+\href{https://github.com/aconsciousfractal/type-a-poset-cones-and-extension-tilers}
+{\texttt{https://github.com/aconsciousfractal/}}\\
+\href{https://github.com/aconsciousfractal/type-a-poset-cones-and-extension-tilers}
+{\texttt{type-a-poset-cones-and-extension-tilers}}
+\end{center}
 The reproducibility boundary for this snapshot is recorded in
-\path{REPRODUCE.md}.  The theorem-level six-element
+\path{REPRODUCE.md}, with per-file hashes in \path{MANIFEST_SHA256.txt}.
+The theorem-level six-element
 counterexample is checked by
 \path{scripts/verify_s6_p038_biset_counterexample.py}.  The order-polytope
 cube-tiling corollary is a deterministic consequence of the same exact

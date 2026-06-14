@@ -1,14 +1,14 @@
 # Source Lock
 
-Snapshot date: 2026-06-06.
+Snapshot date: 2026-06-14.
 
 ## Canonical PDF
 
 ```text
 paper/Type-A Poset Cones and Extension Tilers.pdf
 pages = 16
-bytes = 418231
-sha256 = FF1A8A818072FB18343042CF93FEA1FF8F2978EFF83569155F3B64FFFAAE22F5
+bytes = 421462
+sha256 = 82AC4BE33FE62249CC11AD5AFB22AFBD0C738C331E1C724DF5565EAD8AF0CA0F
 ```
 
 ## Canonical Source

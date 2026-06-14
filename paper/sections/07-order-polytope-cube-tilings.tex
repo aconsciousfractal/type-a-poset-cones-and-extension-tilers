@@ -1,7 +1,7 @@
 We record the geometric shadow of an extension-tiler factorization.  This
 section uses only the standard order polytope of a poset and the standard
-simplex triangulation of the cube; no projected picture or flux
-materialization is part of the proof.
+simplex triangulation of the cube; no projected or visual model is part of
+the proof.
 
 Let $P$ be a poset on a finite label set $X$, with $|X|=n$.  Its order
 polytope is
@@ -41,12 +41,18 @@ linear extension of $P$, and $x$ lies in the corresponding
 $\Delta_\sigma$.
 \end{proof}
 
-For $a\in S_X$, write
+For $a\in S_X$, let $T_a$ be the coordinate permutation defined by
 \[
-        a\mathcal O(P)=\bigcup_{\sigma\in L(P)}\Delta_{a\sigma},
+        (T_a x)_{a(i)}=x_i
+        \qquad (i\in X).
 \]
-where $a$ acts on the labels in the word.  Equivalently, this is the
-coordinate-relabeling of $\mathcal O(P)$ by $a$.
+Then $T_a(\Delta_\sigma)=\Delta_{a\sigma}$, where $a$ acts on the labels
+in the word.  We write
+\[
+        a\mathcal O(P):=T_a(\mathcal O(P))
+        =\bigcup_{\sigma\in L(P)}\Delta_{a\sigma},
+\]
+for this coordinate-relabeling of $\mathcal O(P)$ by $a$.
 
 \begin{proposition}[Extension tilers give cube tilings]
 \label{prop:extension-tiler-order-polytope-cube-tiling}
@@ -71,12 +77,13 @@ one piece.  Since the standard simplices tile the cube and have disjoint
 relative interiors, the stated cube tiling follows.
 \end{proof}
 
-\begin{corollary}[The $P038$ order-polytope cube tiling]
+\begin{corollary}[The six-element counterexample order-polytope cube tiling]
 \label{cor:p038-order-polytope-cube-tiling}
-For the poset $P$ of Theorem~\ref{thm:s6-counterexample}, the unit cube
-$[0,1]^6$ is tiled, up to shared boundaries, by the $48$ coordinate
-permutations $a\mathcal O(P)$ with $a\in A=HK\sqcup H\tau K$.  Each copy
-has volume $15/720=1/48$.
+For the poset $P$ of Theorem~\ref{thm:s6-counterexample}, called $P038$ in
+the supplementary enumeration, the unit cube $[0,1]^6$ is tiled, up to
+shared triangulation faces, by the $48$ coordinate permutations
+$a\mathcal O(P)$ with $a\in A=HK\sqcup H\tau K$.  Each copy has volume
+$15/720=1/48$.
 \end{corollary}
 
 \begin{proof}

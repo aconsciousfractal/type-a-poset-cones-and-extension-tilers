@@ -20,7 +20,8 @@ independently checkable paper certificate.
 \text{non-series-parallel divisible candidates} & 57,\\
 \text{non-series-parallel tilers} & 19,\\
 \text{obstruction-side candidates classified negative by the audit} & 38,\\
-\text{unresolved survivors in the audit} & 0.
+\text{audit-unclassified survivors} & 0,\\
+\text{negative audit rows still lacking compact independent certificates} & 5.
 \end{array}
 \]
 This table is included as audit-level laboratory status data, not as a
@@ -30,8 +31,8 @@ checkable certificates in the text or supplement.
 
 \subsection*{Positive structure}
 
-The known non-series-parallel tilers in $S_6$ include multiplier sets with
-subgroup, coset, and double-coset structure.
+The positive rows in the current six-element audit include multiplier sets
+with subgroup, coset, and double-coset structure.
 Theorem~\ref{thm:s6-counterexample} is the cleanest instance:
 the multiplier set is
 \[
@@ -45,7 +46,7 @@ group-theoretic organization beyond raw exact-cover search.
 
 \subsection*{Obstruction grammar}
 
-On the negative side, most obstruction-side candidates fall into reusable
+On the negative side, many obstruction-side candidates fall into reusable
 families.  The current grammar includes:
 \[
 \begin{gathered}
@@ -81,9 +82,10 @@ The current status table records them as defect-one residual packing
 obstructions.  The numerical rows below are taken from
 \texttt{s6\_classification\_status.json}; they are not derived from the
 legacy Colab/RoundingSat timeout logs mentioned in the computational
-appendix.  After forcing the identity translate, the residual packing graph
-has maximum clique one below the size required for a tiling.  In the table
-below, ``req.'' is the number of tiles required for a full tiling,
+appendix.  After forcing the identity translate, the audit computation
+reports that the residual packing graph has maximum clique one below the
+size required for a tiling.  In the table below, ``req.'' is the number of
+tiles required for a full tiling,
 ``target'' is the residual clique size after the identity translate is
 fixed, and ``conf.'' is the number of binary incompatibility constraints in
 the residual graph:
@@ -99,8 +101,9 @@ the residual graph:
 020 & 24 & 30 & 29 & 28 & 313 & 6554
 \end{array}
 \]
-Equivalently, each maximum near-packing leaves a residual set of exactly
-one tile-size, but the residual cannot be completed by another translate.
+Equivalently, in the audit data, each maximum near-packing leaves a residual
+set of exactly one tile-size, but the residual cannot be completed by another
+translate.
 The laboratory also sees these cases as integer holes in ordered-triple
 marginals: the linear relaxation is feasible, but the integer decomposition
 is infeasible.
