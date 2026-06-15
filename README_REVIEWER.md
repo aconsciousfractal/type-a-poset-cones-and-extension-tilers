@@ -27,6 +27,8 @@ The paper promotes:
 - the positive theorem for series-parallel posets;
 - the full `S5` classification;
 - the explicit non-series-parallel `S6` extension tiler `P038`;
+- the type-`A5` Coxeter-complex realization induced by the same `P038`
+  factorization;
 - the order-polytope tiling of `[0,1]^6` induced by the same `P038`
   factorization.
 

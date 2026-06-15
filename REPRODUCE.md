@@ -1,6 +1,6 @@
 # Reproduce The Paper Artifacts
 
-Snapshot date: 2026-06-14.
+Snapshot date: 2026-06-15.
 
 ## Environment
 
@@ -30,9 +30,9 @@ Current canonical PDF:
 
 ```text
 paper/Type-A Poset Cones and Extension Tilers.pdf
-pages = 16
-bytes = 421462
-sha256 = 82AC4BE33FE62249CC11AD5AFB22AFBD0C738C331E1C724DF5565EAD8AF0CA0F
+pages = 17
+bytes = 425172
+sha256 = FD613E0DA836A41A9B8502689B408E147C995CA0BA61D88D2556AE41CDCC8AC9
 ```
 
 The paper source is `paper/Type-A Poset Cones and Extension Tilers.tex`.
@@ -61,9 +61,10 @@ induced N copies = 4
 PASS
 ```
 
-The order-polytope cube-tiling corollary in the paper is a direct consequence
-of this same exact factorization.  No additional visual or numerical artifact
-is needed for the proof.
+The type-`A5` Coxeter-complex realization corollary and the order-polytope
+cube-tiling corollary in the paper are direct consequences of this same exact
+factorization.  No additional visual or numerical artifact is needed for
+either proof.
 
 ## Replay The S5 Audit
 
@@ -99,5 +100,5 @@ certificates/s6_classification_status.md
 
 ## Manifest
 
-The root file `MANIFEST_SHA256.txt` contains SHA-256 hashes for every file in
-this public staging package.
+The root file `MANIFEST_SHA256.txt` contains SHA-256 hashes for tracked files
+in this public staging package, excluding `MANIFEST_SHA256.txt` itself.

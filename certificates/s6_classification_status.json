@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-14",
+  "date": "2026-06-15",
   "paper_grade": {
     "counterexample": {
       "id": "P038",
@@ -23,6 +23,15 @@
         "multiplicities": [1]
       },
       "verifier": "scripts/verify_s6_p038_biset_counterexample.py",
+      "type_a5_coxeter_complex_realization": {
+        "status": "paper corollary",
+        "complex": "type A5 Coxeter complex",
+        "chambers": 720,
+        "pieces": 48,
+        "chambers_per_piece": 15,
+        "source": "S6 = disjoint union a L(P038)",
+        "boundary": "Coxeter-complex chamber statement; not a full type-A5 tiler classification, outer-automorphism explanation, metric rigidity theorem, or full face-lattice certificate"
+      },
       "order_polytope_cube_tiling": {
         "status": "paper corollary",
         "cube": "[0,1]^6",
@@ -115,6 +124,7 @@
     "include_now": [
       "S5 classification theorem",
       "P038 S6 counterexample theorem",
+      "P038 type-A5 Coxeter-complex realization corollary",
       "P038 order-polytope cube-tiling corollary",
       "corollary that the extension-tiler converse is false",
       "open problem: classify all extension tilers"

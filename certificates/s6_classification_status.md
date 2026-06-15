@@ -1,6 +1,6 @@
 # S6 Classification Status
 
-Date: 2026-06-14
+Date: 2026-06-15
 
 This note separates paper-grade facts from computational laboratory status for
 the six-element extension-tiler problem.
@@ -56,6 +56,14 @@ HK cap H tau K = empty
 ```
 
 The translates `a L(P038)`, for `a in A`, partition `S_6`.
+
+Interpreting the elements of `S_6` as chambers of the type-`A5` Coxeter
+complex, the same exact factorization gives a 48-piece Coxeter-complex chamber
+tiling by translates of the 15-chamber poset cone `C(P038)=L(P038)`.
+
+This is a Coxeter-complex chamber statement.  It is not a full type-`A5` tiler
+classification, not an outer-automorphism explanation, and not a metric
+rigidity or full face-lattice theorem.
 
 By the standard simplex triangulation of the unit cube, the same
 factorization also gives a coordinate-permutation tiling of `[0,1]^6` by 48
@@ -190,6 +198,7 @@ The current paper should include:
 ```text
 S5 classification theorem
 P038 S6 counterexample theorem
+P038 type-A5 Coxeter-complex realization corollary
 P038 order-polytope cube-tiling corollary
 corollary: the extension-tiler converse is false
 open problem: classify extension tilers, especially the S6 non-SP families

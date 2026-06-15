@@ -117,3 +117,40 @@ MANIFEST_SHA256.txt: PASS
 LaTeX log red-team scan: PASS
 fragile-wording scan: PASS
 ```
+
+## 2026-06-15 Addendum - Type-A5 Coxeter-Complex Realization
+
+Scope: checked the new Coxeter-complex realization corollary in
+`sections/06-s6-counterexample.tex` and the corresponding public claim-boundary
+updates.
+
+Verdict:
+
+```text
+GO
+```
+
+Checks:
+
+- The new corollary is a deterministic restatement of the already verified
+  exact factorization `S6 = disjoint union a L(P038)`.
+- The proof uses the existing type-A chamber dictionary: chambers are indexed
+  by words, and the chamber graph is the adjacent-transposition graph.
+- The wording stays inside the paper's established vocabulary:
+  Coxeter complex, chamber-union, poset cone, and left translate.
+- The local wall-profile computation is not included as a public claim.
+- No full `S6` classification, outer-automorphism explanation, three-dimensional
+  tetrahedron statement, metric rigidity, or full face-lattice theorem is
+  promoted.
+
+Verification run:
+
+```text
+pdflatex/bibtex/pdflatex/pdflatex: PASS
+scripts/verify_s6_p038_biset_counterexample.py: PASS
+scripts/replay_s5_extension_tiler_audit.py: PASS
+python -m json.tool certificates/s6_classification_status.json: PASS
+MANIFEST_SHA256.txt, excluding self-hash: PASS
+LaTeX log red-team scan: PASS
+fragile-wording scan: PASS
+```

@@ -1,6 +1,6 @@
 # Claim Ledger
 
-Snapshot date: 2026-06-06.
+Snapshot date: 2026-06-15.
 
 ## Promoted Claims
 
@@ -55,6 +55,19 @@ scripts/verify_s6_p038_biset_counterexample.py
 
 Status: paper theorem / exact finite construction.
 
+### Type-A5 Coxeter-Complex Realization
+
+The `P038` exact factorization
+`S6 = disjoint union a L(P038)` also realizes the type-`A5` Coxeter complex
+as 48 left translates of a 15-chamber poset cone.
+
+Status: paper corollary / deterministic consequence of the exact finite
+construction.
+
+Boundary: this is a Coxeter-complex chamber statement.  It is not a full
+classification of type-`A5` tilers, not an outer-automorphism explanation, and
+not a metric rigidity or full face-lattice theorem.
+
 ### Order-Polytope Cube Tiling
 
 Any extension-tiler factorization `S_X = disjoint union a L(P)` induces a
@@ -92,6 +105,7 @@ Can say:
 ```text
 The series-parallel converse is false in S6.
 P038 is a compact non-series-parallel extension tiler.
+P038 gives a 48-piece type-A5 Coxeter-complex chamber tiling.
 P038 also gives a 48-piece order-polytope tiling of the 6-cube.
 The current S6 laboratory audit reports a structured 19/38 split.
 ```
@@ -102,4 +116,6 @@ Do not say:
 The full S6 19/38 split is a paper theorem.
 The five hard obstruction-side cases have compact proof certificates.
 Historical Colab/RoundingSat runs are proof certificates.
+The P038 Coxeter-complex corollary classifies all type-A5 tilers.
+The P038 Coxeter-complex corollary proves an outer-automorphism explanation.
 ```

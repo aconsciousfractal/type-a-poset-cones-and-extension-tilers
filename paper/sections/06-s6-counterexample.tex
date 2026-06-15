@@ -76,6 +76,39 @@ four induced copies of $N$.
 The converse of Theorem~\ref{thm:sp-extension-tiler} is false.
 \end{corollary}
 
+\begin{corollary}[Coxeter-complex realization]
+\label{cor:s6-counterexample-coxeter-realization}
+Let $P$ be the six-element poset of
+Theorem~\ref{thm:s6-counterexample}.  In the type $A_5$ Coxeter complex,
+whose chambers are indexed by the elements of $S_6$, the chamber set
+$L(P)$ is a $15$-chamber Coxeter-pure piece.  The $48$ left translates
+\[
+        \{aL(P): a\in A\}
+\]
+from Theorem~\ref{thm:s6-counterexample} form a disjoint partition of the
+$720$ Coxeter chambers.  Equivalently, the verified $P038$ factorization
+realizes a type $A_5$ Coxeter-pure group-translate tiling by $48$
+translates of the $15$-chamber poset cone $C(P)=L(P)$.
+\end{corollary}
+
+\begin{proof}
+Index the chambers of the type $A_5$ Coxeter complex by words
+$w\in S_6$.  The chamber graph is the adjacent-transposition graph on
+words.  Relabeling every entry of a word by an element of $S_6$ sends
+adjacent words to adjacent words, and therefore preserves the Coxeter
+chamber structure.
+
+Theorem~\ref{thm:s6-counterexample} gives the exact factorization
+\[
+        S_6=\bigsqcup_{a\in A} aL(P),
+\]
+where $|L(P)|=15$ and $|A|=48$.  Replacing each word by the corresponding
+Coxeter chamber gives a disjoint cover of all $720$ type $A_5$ chambers by
+$48$ left translates of the $15$-chamber set $L(P)$.  Since each translate
+is obtained by a Coxeter-group action, the pieces are congruent as
+Coxeter-chamber unions.
+\end{proof}
+
 \begin{remark}
 The multiplier set above has visible two-sided structure: it is a union of
 two $(H,K)$-double cosets, with $H\cong D_4$ and $K\cong S_3$.  This
