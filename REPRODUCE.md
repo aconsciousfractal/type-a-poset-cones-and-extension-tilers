@@ -30,9 +30,9 @@ Current canonical PDF:
 
 ```text
 paper/Type-A Poset Cones and Extension Tilers.pdf
-pages = 17
-bytes = 425172
-sha256 = FD613E0DA836A41A9B8502689B408E147C995CA0BA61D88D2556AE41CDCC8AC9
+pages = 18
+bytes = 431084
+sha256 = 6FA99C15BD61A44E13BF38AF2D430D7A2D15AE50DACF9413C6F46E05CFBCE191
 ```
 
 The paper source is `paper/Type-A Poset Cones and Extension Tilers.tex`.
@@ -63,8 +63,46 @@ PASS
 
 The type-`A5` Coxeter-complex realization corollary and the order-polytope
 cube-tiling corollary in the paper are direct consequences of this same exact
-factorization.  No additional visual or numerical artifact is needed for
-either proof.
+factorization.  No additional visual or numerical artifact is needed for the
+tiling proof.
+
+## Verify The P038 Order-Polytope Geometry
+
+The following replay checks supporting data for the single tile
+`O(P038)`.  These data make the tile inspectable; they are not a separate
+tiling proof and not a classification claim.
+
+The static certificate is:
+
+```text
+certificates/p038_order_polytope_geometry.json
+```
+
+From the repository root:
+
+```bash
+python scripts/verify_p038_order_polytope_geometry.py
+```
+
+Expected output:
+
+```text
+linear extensions = 15
+order ideals / vertices = 13
+natural support facets = 10
+boundary f-vector = (13, 50, 88, 81, 40, 10)
+top face count = 1
+h-star = [1, 6, 7, 1, 0, 0, 0]
+h-star polynomial = 1 + 6t + 7t^2 + t^3
+PASS
+```
+
+The default command recomputes the data and checks the static certificate.
+After intentional changes, regenerate the certificate with:
+
+```bash
+python scripts/verify_p038_order_polytope_geometry.py --write
+```
 
 ## Replay The S5 Audit
 

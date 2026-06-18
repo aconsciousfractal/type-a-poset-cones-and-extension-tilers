@@ -12,6 +12,8 @@ This package is public-facing but intentionally conservative.
   tiling by 48 left translates of a 15-chamber poset cone.
 - The same `P038` factorization gives a coordinate-permutation tiling of
   `[0,1]^6` by 48 copies of the order polytope of `P038`.
+- The single tile `O(P038)` has certified supporting face and Ehrhart data:
+  13 vertices, 10 support facets, and `h* = 1 + 6t + 7t^2 + t^3`.
 
 ## Laboratory-Level Only
 
@@ -36,3 +38,11 @@ cases still need compact portable certificates:
 Historical Colab/RoundingSat artifacts are excluded from this public package
 except for the note `certificates/legacy_colab_artifacts.md`.  Those artifacts
 are not proof certificates.
+
+## Boundary For The P038 Tile Geometry Data
+
+The face-vector and Ehrhart data for `O(P038)` are finite replay data for the
+specific tile used in the cube-tiling corollary.  They may be used to make the
+tile more inspectable.  They must not be used as a classification of all
+order-polytope cube tilings, as a proof that the tiling works independently of
+the exact `S6` factorization, or as a literature novelty theorem.

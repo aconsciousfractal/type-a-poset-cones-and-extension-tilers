@@ -154,3 +154,44 @@ MANIFEST_SHA256.txt, excluding self-hash: PASS
 LaTeX log red-team scan: PASS
 fragile-wording scan: PASS
 ```
+
+## 2026-06-18 Addendum - P038 Order-Polytope Geometry Merge
+
+Scope: checked the merge of supporting geometry data from the standalone
+order-polytope note into the Type-A paper package.
+
+Verdict:
+
+```text
+GO
+```
+
+Checks:
+
+- The inserted material concerns the single tile `O(P038)`: vertices, natural
+  support facets, boundary `f`-vector, and Ehrhart/h-star data.
+- The cube-tiling proof remains the existing deterministic consequence of the
+  exact factorization `S6 = disjoint union a L(P038)` and the standard cube
+  triangulation.
+- No PAPP flux, projected mesh, OBJ, tube model, or generated visual artifact
+  is promoted as paper evidence.
+- No chain-polytope transfer, alcoved-polytopes theorem, classification,
+  uniqueness, first-example, or novelty claim is added.
+- The new replay script is self-contained and has no third-party Python
+  dependencies.
+- The static geometry certificate is recorded as
+  `certificates/p038_order_polytope_geometry.json`.
+- The paper Data and Code Availability section points to both the script and
+  the static certificate for Proposition 7.4.
+
+Verification target before release:
+
+```text
+pdflatex/bibtex/pdflatex/pdflatex: PASS
+scripts/verify_s6_p038_biset_counterexample.py: PASS
+scripts/verify_p038_order_polytope_geometry.py: PASS
+scripts/replay_s5_extension_tiler_audit.py: PASS
+python -m json.tool certificates/s6_classification_status.json: PASS
+LaTeX log red-team scan: PASS
+MANIFEST_SHA256.txt: PASS
+```

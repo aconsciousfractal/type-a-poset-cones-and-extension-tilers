@@ -80,6 +80,27 @@ of `O(P038)`.
 Status: paper corollary / deterministic consequence of the exact finite
 construction.
 
+### Certified P038 Order-Polytope Geometry
+
+In order-ideal indicator coordinates, the order polytope `O(P038)` has 13
+vertices, 10 irredundant natural support facets, boundary `f`-vector
+`(13,50,88,81,40,10)`, and `h*`-polynomial
+`1 + 6t + 7t^2 + t^3`.
+
+Verifier:
+
+```text
+scripts/verify_p038_order_polytope_geometry.py
+```
+
+Static certificate: `certificates/p038_order_polytope_geometry.json`.
+
+Status: supporting finite replay data for the order-polytope cube-tiling
+corollary.
+
+Boundary: this is not a separate tiling proof, not a classification claim, and
+not a novelty claim.
+
 ## Audit-Level Claims
 
 ### S6 19/38 Laboratory Status
@@ -107,6 +128,7 @@ The series-parallel converse is false in S6.
 P038 is a compact non-series-parallel extension tiler.
 P038 gives a 48-piece type-A5 Coxeter-complex chamber tiling.
 P038 also gives a 48-piece order-polytope tiling of the 6-cube.
+The P038 order-polytope tile has certified supporting face and Ehrhart data.
 The current S6 laboratory audit reports a structured 19/38 split.
 ```
 
@@ -118,4 +140,6 @@ The five hard obstruction-side cases have compact proof certificates.
 Historical Colab/RoundingSat runs are proof certificates.
 The P038 Coxeter-complex corollary classifies all type-A5 tilers.
 The P038 Coxeter-complex corollary proves an outer-automorphism explanation.
+The P038 order-polytope geometry data classify order-polytope cube tilings.
+The P038 order-polytope geometry data establish a literature novelty theorem.
 ```

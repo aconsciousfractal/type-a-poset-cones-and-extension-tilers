@@ -9,6 +9,7 @@ From the repository root:
 
 ```bash
 python scripts/verify_s6_p038_biset_counterexample.py
+python scripts/verify_p038_order_polytope_geometry.py
 python scripts/replay_s5_extension_tiler_audit.py
 python -m json.tool certificates/s6_classification_status.json
 ```
@@ -16,6 +17,8 @@ python -m json.tool certificates/s6_classification_status.json
 Expected high-level outcomes:
 
 - `verify_s6_p038_biset_counterexample.py` ends with `PASS`.
+- `verify_p038_order_polytope_geometry.py` ends with `PASS` and validates
+  `certificates/p038_order_polytope_geometry.json`.
 - `replay_s5_extension_tiler_audit.py` ends with `PASS`.
 - `s6_classification_status.json` parses as valid JSON.
 
@@ -31,6 +34,8 @@ The paper promotes:
   factorization;
 - the order-polytope tiling of `[0,1]^6` induced by the same `P038`
   factorization.
+The finite face-vector and Ehrhart data for `O(P038)` support the last item
+but are not promoted as a separate classification or novelty theorem.
 
 ## What Is Audit-Level Only
 
@@ -62,4 +67,5 @@ paper/sections/07-s6-laboratory.tex
 docs/CLAIM_LEDGER.md
 docs/PUBLIC_CLAIM_BOUNDARY.md
 scripts/verify_s6_p038_biset_counterexample.py
+scripts/verify_p038_order_polytope_geometry.py
 ```

@@ -156,6 +156,47 @@ This is not a claim about arbitrary Euclidean congruent copies and does not
 use the projected PAPP/flux visual artifacts.
 ```
 
+### CL3 - P038 Order-Polytope Geometry Data
+
+Statement:
+
+```text
+The order polytope O(P038), in order-ideal indicator coordinates, has
+13 vertices, 10 irredundant natural support facets, boundary f-vector
+(13,50,88,81,40,10), and h*-polynomial 1 + 6t + 7t^2 + t^3.
+```
+
+Verifier:
+
+```text
+scripts/verify_p038_order_polytope_geometry.py
+```
+
+Static certificate:
+
+```text
+certificates/p038_order_polytope_geometry.json
+```
+
+Expected verifier result:
+
+```text
+PASS
+```
+
+Status:
+
+```text
+supporting finite replay data for the order-polytope cube-tiling corollary
+```
+
+Boundary:
+
+```text
+This is tile geometry data.  It is not a new tiling proof, not a
+classification of order-polytope cube tilings, and not a novelty claim.
+```
+
 ## Laboratory Claims Not Promoted To Theorem
 
 ### CL3-Lab - S6 19/38 Audit

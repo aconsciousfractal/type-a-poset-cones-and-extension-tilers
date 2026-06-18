@@ -20,6 +20,8 @@ snapshot are:
   Coxeter-complex chamber tiling by translates of a 15-chamber poset cone;
 - the `P038` witness also gives a coordinate-permutation tiling of `[0,1]^6`
   by 48 copies of its order polytope, via the standard cube triangulation;
+- the `P038` order-polytope tile has replayed supporting geometry data:
+  13 vertices, 10 support facets, and `h* = 1 + 6t + 7t^2 + t^3`;
 - the broader `S6` audit records a structured `19/38` laboratory split among
   the `57` divisible non-series-parallel candidates, but this split is not
   promoted to a theorem in this paper.
@@ -48,6 +50,7 @@ scripts.
 
 ```bash
 python scripts/verify_s6_p038_biset_counterexample.py
+python scripts/verify_p038_order_polytope_geometry.py
 python scripts/replay_s5_extension_tiler_audit.py
 python -m json.tool certificates/s6_classification_status.json
 ```
@@ -68,7 +71,9 @@ pdflatex -interaction=nonstopmode -halt-on-error "Type-A Poset Cones and Extensi
 The theorem-level objects are the `S5` classification, the explicit `S6`
 counterexample `P038`, the induced type-`A5` Coxeter-complex realization,
 and the order-polytope cube-tiling corollary that follows from the same
-factorization.  The broader `S6` table is retained as audit-level laboratory
+factorization.  The additional face and Ehrhart data for the `P038` order
+polytope are supporting finite replay data, not separate classification or
+novelty claims.  The broader `S6` table is retained as audit-level laboratory
 status because five obstruction-side cases still lack compact portable
 certificates:
 
