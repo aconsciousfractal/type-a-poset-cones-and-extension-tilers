@@ -1,6 +1,6 @@
 # Reproduce The Paper Artifacts
 
-Snapshot date: 2026-06-15.
+Snapshot date: 2026-06-18.
 
 ## Environment
 
@@ -31,8 +31,8 @@ Current canonical PDF:
 ```text
 paper/Type-A Poset Cones and Extension Tilers.pdf
 pages = 18
-bytes = 431084
-sha256 = 6FA99C15BD61A44E13BF38AF2D430D7A2D15AE50DACF9413C6F46E05CFBCE191
+bytes = 431090
+sha256 = E0FDA354316CD1F50C39D49CE8A951820E99A86CB9CB9DB0631647EB70404229
 ```
 
 The paper source is `paper/Type-A Poset Cones and Extension Tilers.tex`.
@@ -140,3 +140,9 @@ certificates/s6_classification_status.md
 
 The root file `MANIFEST_SHA256.txt` contains SHA-256 hashes for tracked files
 in this public staging package, excluding `MANIFEST_SHA256.txt` itself.
+
+On systems with GNU `sha256sum`, validate it with:
+
+```bash
+sha256sum -c MANIFEST_SHA256.txt
+```

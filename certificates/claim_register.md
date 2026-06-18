@@ -1,9 +1,12 @@
 # Claim Register
 
-Date: 2026-06-06
+Date: 2026-06-18
 
 This register records the current claim boundary for the Type-A
 extension-tiler paper after the S6 counterexample.
+For public-facing review, `docs/CLAIM_LEDGER.md` is the primary claim ledger;
+this register records the corresponding certificate-level statuses and
+verification paths.
 
 ## Claim Levels
 

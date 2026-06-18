@@ -3,11 +3,11 @@ Theorem~\ref{thm:s5-classification}.  The theorem itself is proved in the
 main text by finite classification and fiber counts.  The current
 repository snapshot stores the expected audit output in
 \[
-\texttt{../certificates/s5\_expected\_output.txt}.
+\texttt{certificates/s5\_expected\_output.txt}.
 \]
 The current replay script
 \[
-\texttt{../scripts/replay\_s5\_extension\_tiler\_audit.py}
+\texttt{scripts/replay\_s5\_extension\_tiler\_audit.py}
 \]
 reproduces the aggregate S5 counts and the former rank and packing audit
 certificates.  These computations are retained as independent audit
@@ -17,7 +17,7 @@ finite table plus the elementary obstructions in the main text.
 The six-element counterexample in Theorem~\ref{thm:s6-counterexample} has
 a separate self-contained verifier:
 \[
-\texttt{../scripts/verify\_s6\_p038\_biset\_counterexample.py}.
+\texttt{scripts/verify\_s6\_p038\_biset\_counterexample.py}.
 \]
 It reconstructs the poset, the subgroups $H,K$, the multiplier set
 $A=HK\sqcup H\tau K$, and checks that the $48$ translates of the
@@ -25,13 +25,13 @@ $15$-element tile cover all $720$ elements of $S_6$ exactly once.
 
 The broader six-element laboratory status is recorded in
 \[
-\texttt{../certificates/s6\_classification\_status.md}
+\texttt{certificates/s6\_classification\_status.md}
 \]
 and in the companion JSON file with the same base name.  Historical
 Colab/RoundingSat artifacts for the five hard residual-clique cases are
 kept as an audit trail only; the note
 \[
-\texttt{../certificates/legacy\_colab\_artifacts.md}
+\texttt{certificates/legacy\_colab\_artifacts.md}
 \]
 marks them as timeout/UNKNOWN exploration rather than proof certificates.
 

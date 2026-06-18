@@ -184,7 +184,7 @@ Checks:
 - The paper Data and Code Availability section points to both the script and
   the static certificate for Proposition 7.4.
 
-Verification target before release:
+Verification run after release fixes:
 
 ```text
 pdflatex/bibtex/pdflatex/pdflatex: PASS
@@ -193,5 +193,32 @@ scripts/verify_p038_order_polytope_geometry.py: PASS
 scripts/replay_s5_extension_tiler_audit.py: PASS
 python -m json.tool certificates/s6_classification_status.json: PASS
 LaTeX log red-team scan: PASS
+PDF text freshness scan for the P038 geometry script/certificate: PASS
 MANIFEST_SHA256.txt: PASS
 ```
+
+## 2026-06-18 Addendum - Public Repository Hygiene
+
+Scope: checked a follow-up external review of repository packaging and
+reader-facing wording after the P038 geometry merge.
+
+Verdict:
+
+```text
+GO after mini-fixes
+```
+
+Fixes and checks:
+
+- Removed borderline novelty wording by replacing "first compact example" with
+  a paper-local description of the main compact example.
+- Softened the right-hand matching language in the `S6` laboratory discussion
+  so it is presented as a suggested pattern, not a verified theorem.
+- Replaced "paper-grade or nearly paper-grade obstruction families" with
+  conservative obstruction-family wording.
+- Changed computational appendix paths to repository-root-relative paths.
+- Updated `REPRODUCE.md` snapshot date to 2026-06-18.
+- Checked that `CITATION.cff`, `LICENSE`, `.gitignore`, and
+  `MANIFEST_SHA256.txt` are multiline and parse/read as intended.
+- `cffconvert` is not installed in this environment; `CITATION.cff` was
+  nevertheless parsed successfully as YAML with the required top-level fields.
