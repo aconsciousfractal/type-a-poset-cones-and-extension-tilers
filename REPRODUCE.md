@@ -31,8 +31,8 @@ Current canonical PDF:
 ```text
 paper/Type-A Poset Cones and Extension Tilers.pdf
 pages = 18
-bytes = 431090
-sha256 = E0FDA354316CD1F50C39D49CE8A951820E99A86CB9CB9DB0631647EB70404229
+bytes = 432289
+sha256 = 357DD7A24B791A11123BF96E1456D9452699BEF9CFA37C7A0CA3B85A1239FCC2
 ```
 
 The paper source is `paper/Type-A Poset Cones and Extension Tilers.tex`.
