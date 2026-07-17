@@ -10,16 +10,30 @@ verification paths.
 
 ## Claim Levels
 
-The levels follow the PAPP convention:
+The `Level` fields below use the official PAPP taxonomy
+(Gate-Disciplined-Computational-Mathematics/docs/CLAIM_LEVELS.md); added
+2026-07-17 (ledger A-1).  The existing section-header prefixes and all claim
+text, verifiers, and boundaries are unchanged; the per-claim `Level` field is
+an additive normalization onto the full official code set:
 
-- `CL3`: certified finite result / exact finite replay.
-- `CL5`: internal theorem in the paper.
-- `CLO`: proof obligation still open.
-- `CLB`: blocked from theorem promotion.
+- `CL0`: observation (raw pattern, first output).
+- `CL1`: computational evidence (sweep or experiment).
+- `CL2`: finite replay (bounded computation with replay path).
+- `CL3`: certified finite result (exact enumeration, manifest, checker).
+- `CL4`: theorem import (external theorem used by reference).
+- `CL5`: internal theorem (proved in the paper/project).
+- `CL6`: formal proof (machine-checked artifact).
+- `CLB`: blocked (missing source, proof, artifact, or contract).
+- `CLO`: proof obligation (precise missing lemma or bridge).
+- `CLN`: bounded negative (no-hit/negative under stated bounds).
+- `CLW`: watch (interesting but not promotable).
+- `CLM`: metadata (labels, locks, manifests, source tags).
 
 ## Promoted Claims
 
 ### CL5 - Poset-Cone Dictionary In Type A
+
+Level: `CL5` (internal theorem).
 
 Statement:
 
@@ -43,6 +57,8 @@ global equivalence.
 
 ### CL5 - Series-Parallel Posets Are Extension Tilers
 
+Level: `CL5` (internal theorem).
+
 Statement:
 
 ```text
@@ -62,6 +78,8 @@ This is one direction only.  The converse is false in S6.
 ```
 
 ### CL5/CL3 - S5 Classification
+
+Level: `CL5` (internal theorem), with `CL3` certified finite audit support.
 
 Statement:
 
@@ -83,6 +101,8 @@ paper theorem with finite audit support
 ```
 
 ### CL5/CL3 - S6 Counterexample P038
+
+Level: `CL5` (internal theorem), with `CL3` exact finite construction (verifier below).
 
 Statement:
 
@@ -132,6 +152,8 @@ The converse "extension tiler => series-parallel" is false.
 
 ### CL5/CL3 - Order-Polytope Cube Tiling
 
+Level: `CL5` (internal theorem/corollary), with `CL3` deterministic consequence of the P038 exact factorization.
+
 Statement:
 
 ```text
@@ -160,6 +182,8 @@ use the projected PAPP/flux visual artifacts.
 ```
 
 ### CL3 - P038 Order-Polytope Geometry Data
+
+Level: `CL3` (certified finite result: verifier plus static certificate below).
 
 Statement:
 
@@ -204,6 +228,8 @@ classification of order-polytope cube tilings, and not a novelty claim.
 
 ### CL3-Lab - S6 19/38 Audit
 
+Level: `CL1` (computational evidence; not `CL3` because five obstruction-side cases still lack portable certificates, so under the weakest-sufficient rule this row stays at evidence level).
+
 Statement:
 
 ```text
@@ -238,6 +264,8 @@ independent proof-logged checker.
 ```
 
 ### CLO - Five Defect-One Packing Obstructions
+
+Level: `CLO` (open proof obligation; the blocked-route note records a `CLB` sub-status for the timed-out OPB runs).
 
 Statement:
 
