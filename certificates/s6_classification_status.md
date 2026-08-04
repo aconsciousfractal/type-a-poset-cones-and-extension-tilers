@@ -1,6 +1,6 @@
 # S6 Classification Status
 
-Date: 2026-06-15
+Date: 2026-08-04
 
 This note separates paper-grade facts from computational laboratory status for
 the six-element extension-tiler problem.
@@ -146,69 +146,8 @@ They are defect-one residual packing obstructions.
 | `019` | 24 | 30 | 29 | 28 | 314 | 6498 |
 | `020` | 24 | 30 | 29 | 28 | 313 | 6554 |
 
-The exported OPB instances ask for one more residual disjoint translate than
-the known maximum.  An UNSAT proof for each OPB instance would certify the
-packing obstruction.
-
-## Colab/RoundingSat Attempt
-
-The raw OPB route was tested on Colab.  The input-path issues were fixed, and
-RoundingSat read the OPB files correctly, but the saved runs did not produce
-UNSAT certificates.
-
-Observed saved results:
-
-```text
-013: RoundingSat ran and timed out / UNKNOWN
-017: RoundingSat ran and timed out / UNKNOWN
-020: RoundingSat ran and timed out / UNKNOWN in earlier session
-```
-
-Therefore the next step should not be another blind raw OPB run.  The raw OPB
-instances are useful exports, but they are not the shortest route to a
-paper-grade proof.
-
-## Recommended Next Route For The Five Hard Cases
-
-1. Rebuild clean source scripts for:
-
-```text
-packing graph construction
-maximum residual clique verification
-near-tiling residual extraction
-orbit quotient / stabilizer quotient
-```
-
-2. Try to compress each defect-one obstruction by:
-
-```text
-dual/isomorphism pairing among 013/017/019/020
-orbit quotient of the residual packing graph
-coloring or clique-cover upper-bound certificates
-residual profile obstruction: leftover has tile size but is never a translate
-```
-
-3. Use proof-logging PB/SAT only after compression, or with a solver better
-suited to maximum clique certificates.
-
-## Paper Recommendation
-
-The current paper should include:
-
-```text
-S5 classification theorem
-P038 S6 counterexample theorem
-P038 type-A5 Coxeter-complex realization corollary
-P038 order-polytope cube-tiling corollary
-corollary: the extension-tiler converse is false
-open problem: classify extension tilers, especially the S6 non-SP families
-```
-
-The full statement
-
-```text
-S6 has exactly 19 non-SP tilers and 38 non-SP non-tilers
-```
-
-should remain a laboratory/computational-status statement until the five hard
-packing obstructions have portable certificates.
+These rows are retained only as bounded computational status.  They are not
+used as proof of a theorem in this paper, and no portable certificate is
+claimed for them.  The full `19/38` split remains a laboratory-status
+statement until the five hard packing obstructions have compact independently
+checkable certificates.

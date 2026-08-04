@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-15",
+  "date": "2026-08-04",
   "paper_grade": {
     "counterexample": {
       "id": "P038",
@@ -110,27 +110,5 @@
       "residual_vertices": 313,
       "nonedge_constraints": 6554
     }
-  ],
-  "colab_roundingsat_status": {
-    "raw_opb_inputs_read_correctly": true,
-    "saved_runs": [
-      {"candidate": "013", "result": "UNKNOWN/TIMEOUT"},
-      {"candidate": "017", "result": "UNKNOWN/TIMEOUT"},
-      {"candidate": "020", "result": "UNKNOWN/TIMEOUT in earlier session"}
-    ],
-    "recommendation": "Do not spend more time on blind raw OPB RoundingSat runs; compress packing certificates first."
-  },
-  "paper_recommendation": {
-    "include_now": [
-      "S5 classification theorem",
-      "P038 S6 counterexample theorem",
-      "P038 type-A5 Coxeter-complex realization corollary",
-      "P038 order-polytope cube-tiling corollary",
-      "corollary that the extension-tiler converse is false",
-      "open problem: classify all extension tilers"
-    ],
-    "defer_until_certified": [
-      "Full S6 classification theorem with 19 non-SP tilers and 38 non-SP non-tilers"
-    ]
-  }
+  ]
 }

@@ -33,12 +33,6 @@ cases still need compact portable certificates:
 001, 013, 017, 019, 020
 ```
 
-## Historical Artifacts
-
-Historical Colab/RoundingSat artifacts are excluded from this public package
-except for the note `certificates/legacy_colab_artifacts.md`.  Those artifacts
-are not proof certificates.
-
 ## Boundary For The P038 Tile Geometry Data
 
 The face-vector and Ehrhart data for `O(P038)` are finite replay data for the

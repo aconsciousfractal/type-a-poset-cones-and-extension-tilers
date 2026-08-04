@@ -54,9 +54,6 @@ obstruction-side rows still need compact portable certificates:
 001, 013, 017, 019, 020
 ```
 
-Historical Colab/RoundingSat artifacts are not proof certificates.  They are
-only retained as audit trail notes in `certificates/legacy_colab_artifacts.md`.
-
 ## Files To Inspect First
 
 ```text

@@ -1,6 +1,6 @@
 # Type-A Poset Cones and Extension Tilers
 
-Public staging package for the paper:
+Public source and reproducibility package for the paper:
 
 ```text
 Type-A Poset Cones and Extension Tilers
@@ -33,7 +33,7 @@ snapshot are:
 |-- paper/             LaTeX source, bibliography, sections, and PDFs
 |-- scripts/           Self-contained finite verification scripts
 |-- certificates/      Static audit records and claim-boundary data
-|-- docs/              Reviewer-facing claim ledger and red-team notes
+|-- docs/              Public claim, scope, and source-lock documentation
 |-- README.md
 |-- README_REVIEWER.md
 |-- REPRODUCE.md
@@ -85,7 +85,8 @@ See `docs/PUBLIC_CLAIM_BOUNDARY.md` and `docs/CLAIM_LEDGER.md`.
 
 ## Citation
 
-See `CITATION.cff`.
+Release `v0.2.1` is the immutable public snapshot described by
+`CITATION.cff`.
 
 ## License
 

@@ -7,8 +7,10 @@ authors:
     given-names: Oleksiy
     orcid: "https://orcid.org/0009-0001-6176-6208"
 repository-code: "https://github.com/aconsciousfractal/type-a-poset-cones-and-extension-tilers"
+url: "https://github.com/aconsciousfractal/type-a-poset-cones-and-extension-tilers/tree/v0.2.1"
+version: "0.2.1"
 license: MIT
-date-released: "2026-06-18"
+date-released: "2026-08-04"
 keywords:
   - posets
   - linear-extensions

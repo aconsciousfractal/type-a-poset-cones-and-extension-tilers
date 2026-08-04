@@ -137,7 +137,6 @@ Do not say:
 ```text
 The full S6 19/38 split is a paper theorem.
 The five hard obstruction-side cases have compact proof certificates.
-Historical Colab/RoundingSat runs are proof certificates.
 The P038 Coxeter-complex corollary classifies all type-A5 tilers.
 The P038 Coxeter-complex corollary proves an outer-automorphism explanation.
 The P038 order-polytope geometry data classify order-polytope cube tilings.
